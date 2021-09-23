@@ -112,8 +112,8 @@
 				href="javascript:;"><i class="fa   fa-times-circle"></i></a>
 		</div>
 	</div>
-	
-	
+
+
 	<style>
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -248,7 +248,11 @@
 
 
 
+
+
 :rotate(359deg)
+
+
 
 
 
@@ -259,7 +263,11 @@ transform
 
 
 
+
+
 :rotate(359deg)
+
+
 
 
 
@@ -278,7 +286,11 @@ keyframes fa-spin { 0%{
 
 
 
+
+
 :rotate(359deg)
+
+
 
 
 
@@ -289,7 +301,11 @@ transform
 
 
 
+
+
 :rotate(359deg)
+
+
 
 
 
