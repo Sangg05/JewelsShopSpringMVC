@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
 <meta name="theme-color" content="#2E1C11" />
 <meta charset="UTF-8">
@@ -72,395 +72,268 @@
 
 
 <div id="body_overlay"></div>
-		<div class="container hidden-sm hidden-md hidden-lg">
-			<form
-				class="input-group search-bar search_form margin-top-5 margin-bottom-0"
-				action="/search" method="get" role="search">
-				<input type="search" name="query" value=""
-					placeholder="Từ khóa tìm kiếm... "
-					class="input-group-field st-default-search-input search-text"
-					autocomplete="off"> <span class="input-group-btn">
-					<button name="hotline button" aria-hidden="true"
-						class="btn btn-primary icon-fallback-text">
-						<i class="fa fa-search"></i>
-					</button>
-				</span>
-			</form>
+<div class="container hidden-sm hidden-md hidden-lg">
+	<form
+		class="input-group search-bar search_form margin-top-5 margin-bottom-0"
+		action="/search" method="get" role="search">
+		<input type="search" name="query" value=""
+			placeholder="Từ khóa tìm kiếm... "
+			class="input-group-field st-default-search-input search-text"
+			autocomplete="off"> <span class="input-group-btn">
+			<button name="hotline button" aria-hidden="true"
+				class="btn btn-primary icon-fallback-text">
+				<i class="fa fa-search"></i>
+			</button>
+		</span>
+	</form>
 
+</div>
+<div class="relative">
+	<div class="container relative">
+		<div class="menu-bar hidden-md hidden-lg">
+			<img
+				src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/menu-bar.png?1628876908532"
+				alt="menu bar" />
 		</div>
-		<div class="relative">
-			<div class="container relative">
-				<div class="menu-bar hidden-md hidden-lg">
-					<img
-						src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/menu-bar.png?1628876908532"
-						alt="menu bar" />
+		<div class="social-top hidden-sm hidden-xs">
+			<ul class="inline-list social-icons">
+
+
+				<li><a class="icon-fallback-text"
+					href="https://www.facebook.com/katjewelry/" target="_blank"
+					rel="noopener"> <span class="fa fa-facebooks"
+						aria-hidden="true"></span> <span class="fallback-text">Facebook</span>
+				</a></li>
+
+
+				<li><a class="icon-fallback-text"
+					href="https://www.instagram.com/katjewelry/" target="_blank"
+					rel="noopener"> <span class="fa fa-instagrams"
+						aria-hidden="true"></span> <span class="fallback-text">Instagram</span>
+				</a></li>
+
+
+			</ul>
+		</div>
+
+		<div class="header-main">
+			<div class="row">
+				<div class="col-sm-12 a-center a-xs-left">
+					<div class="logo">
+
+						<a href="/" class="logo-wrapper "> <img
+							src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo.png?1628876908532"
+							data-lazyload="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo.png?1628876908532"
+							alt="logo ">
+						</a>
+
+					</div>
 				</div>
-				<div class="social-top hidden-sm hidden-xs">
-					<ul class="inline-list social-icons">
+			</div>
+		</div>
+		<div class="absolute header-icon">
+			<div class="top-cart-contain f-right">
+				<div class="inline-block account-dr">
+					<ul class="account-ct">
+						<li>
+							<div class="header_search search_form">
+								<form class="input-group search-bar search_form"
+									action="/search" method="get" role="search">
+									<input type="search" name="query" value=""
+										placeholder="Từ khóa tìm kiếm... "
+										class="input-group-field st-default-search-input search-text"
+										autocomplete="off"> <span class="input-group-btn">
+										<button class="btn icon-fallback-text">
+											<i class="fa fa-search"></i>
+										</button>
+									</span>
+								</form>
+							</div>
+						</li>
+					</ul>
+					<a class="icon-cricle" href=""><i class="fa fa-searchs"></i></a>
+				</div>
+				<div class="inline-block account-dr hidden-sm">
+					<a class="icon-cricle" href="/account"><i class="fa fa-userss"></i></a>
+					<ul class="account-ct">
 
-
-						<li><a class="icon-fallback-text"
-							href="https://www.facebook.com/katjewelry/" target="_blank"
-							rel="noopener"> <span class="fa fa-facebooks"
-								aria-hidden="true"></span> <span class="fallback-text">Facebook</span>
-						</a></li>
-
-
-
-
-
-						<li><a class="icon-fallback-text"
-							href="https://www.instagram.com/katjewelry/" target="_blank"
-							rel="noopener"> <span class="fa fa-instagrams"
-								aria-hidden="true"></span> <span class="fallback-text">Instagram</span>
-						</a></li>
-
-
-
-
-
+						<li class="hidden-sm hidden-xs"><a href="/account/register"><i
+								class="fa fa-unlock-alt"></i> Đăng ký</a></li>
+						<li class="hidden-lg hidden-md"><a href="/account/register"><i
+								class="fa fa-unlock-alt"></i> Đăng ký</a></li>
+						<li class="hidden-sm hidden-xs"><a href="/account/login"><i
+								class="fa fa-user"></i> Đăng nhập</a></li>
+						<li class="hidden-lg hidden-md"><a href="/account/login"><i
+								class="fa fa-user"></i> Đăng nhập</a></li>
+						<div id="social_login_widget"></div>
 
 					</ul>
-					<!--<div class="langs">
-					<a href="https://en-trung-katjewelry.bizwebvietnam.net">
-						<img src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/en.svg?1628876908532" alt="Vietnamese" />
-					</a>
-				</div>-->
-				</div>
-
-				<div class="header-main">
-					<div class="row">
-						<div class="col-sm-12 a-center a-xs-left">
-							<div class="logo">
-
-								<a href="/" class="logo-wrapper "> <img
-									src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo.png?1628876908532"
-									data-lazyload="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo.png?1628876908532"
-									alt="logo ">
-								</a>
-
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="absolute header-icon">
-					<div class="top-cart-contain f-right">
-						<div class="inline-block account-dr">
-							<ul class="account-ct">
-								<li>
-									<div class="header_search search_form">
-										<form class="input-group search-bar search_form"
-											action="/search" method="get" role="search">
-											<input type="search" name="query" value=""
-												placeholder="Từ khóa tìm kiếm... "
-												class="input-group-field st-default-search-input search-text"
-												autocomplete="off"> <span class="input-group-btn">
-												<button class="btn icon-fallback-text">
-													<i class="fa fa-search"></i>
-												</button>
-											</span>
-										</form>
-									</div>
-								</li>
-							</ul>
-							<a class="icon-cricle" href=""><i class="fa fa-searchs"></i></a>
-						</div>
-						<div class="inline-block account-dr hidden-sm">
-							<a class="icon-cricle" href="/account"><i
-								class="fa fa-userss"></i></a>
-							<ul class="account-ct">
-
-								<li class="hidden-sm hidden-xs"><a href="/account/register"><i
-										class="fa fa-unlock-alt"></i> Đăng ký</a></li>
-								<li class="hidden-lg hidden-md"><a href="/account/register"><i
-										class="fa fa-unlock-alt"></i> Đăng ký</a></li>
-								<li class="hidden-sm hidden-xs"><a href="/account/login"><i
-										class="fa fa-user"></i> Đăng nhập</a></li>
-								<li class="hidden-lg hidden-md"><a href="/account/login"><i
-										class="fa fa-user"></i> Đăng nhập</a></li>
-								<div id="social_login_widget"></div>
-
-							</ul>
-						</div>
-						<!--<div class="inline-block mini-cart text-xs-center">
-						<div class="heading-cart">
-							<a href="/cart" class="cart-label icon-cricle">
-								<i class="fa fa-shopping-baskets"></i>
-								<span class="cartCount count_item_pr" id="cart-total"></span>
-							</a>
-						</div>
-						<div class="top-cart-content hidden-md hidden-sm hidden-xs">					
-							<ul id="cart-sidebar" class="mini-products-list count_li">
-								<li class="list-item">
-									<ul></ul>
-								</li>
-								<li class="action">
-									<ul>
-										<li class="li-fix-1">
-											<div class="top-subtotal">
-												Tổng tiền thanh toán: 
-												<span class="price"></span>
-											</div>
-										</li>
-										<li class="li-fix-2" style="">
-											<div class="actions">
-												<a href="/cart" class="btn btn-primary">
-													<span>Giỏ hàng</span>
-												</a>
-												<a href="/checkout" class="btn btn-checkout btn-gray">
-													<span>Thanh toán</span>
-												</a>
-											</div>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</div>-->
-						<!--<div class="langs hidden-lg hidden-md">
-						<a href="https://en-trung-katjewelry.bizwebvietnam.net">
-							<img src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/en.svg?1628876908532" alt="Vietnamese" />
-						</a>
-					</div>-->
-					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
 
-		<nav style="background: #fff;">
-			<div class="container">
-				<ul id="nav" class="nav hidden-xs hidden-sm">
+<nav style="background: #fff;">
+	<div class="container">
+		<ul id="nav" class="nav hidden-xs hidden-sm">
 
+			<li class="nav-item active"><a class="nav-link" href="/">Trang
+					chủ</a></li>
 
 
 
 
+			<li class="nav-item  has-mega"><a href="#" class="nav-link">Trang
+					sức <i class="fa fa-angle-down" data-toggle="dropdown"></i>
+			</a>
 
-					<li class="nav-item active"><a class="nav-link" href="/">Trang
-							chủ</a></li>
+				<div class="mega-content">
+					<div class="level0-wrapper2">
+						<div class="nav-block nav-block-center">
+							<ul class="level0">
 
+								<c:forEach var="item" items="${ categories }">
+								
+									<li class="level1 parent item">
+										<p class="h4">
+											<a href=<c:url value='/category/${ item.id }'/>><span>${ item.name }</span></a>
+										</p>
 
+										<p class="level2">
+											<span>${ item.description }</span>
+										</p>
 
+									</li>
+								</c:forEach>
 
+							</ul>
+						</div>
+					</div>
+				</div></li>
 
 
 
 
-					<li class="nav-item  has-mega"><a href="#" class="nav-link">Trang
-							sức <i class="fa fa-angle-down" data-toggle="dropdown"></i>
-					</a>
 
 
-						<div class="mega-content">
-							<div class="level0-wrapper2">
-								<div class="nav-block nav-block-center">
-									<ul class="level0">
 
 
-										<li class="level1 parent item">
-											<p class="h4">
-												<a href="/what-s-new"><span>What’s new</span></a>
-											</p>
-											<ul class="level1">
+			<li class="nav-item "><a class="nav-link" href="/instagram">Instagram</a></li>
 
-												<li class="level2"><a href="/new-collection"><span>New
-															Collections</span></a></li>
 
-												<li class="level2"><a
-													href="/trang-suc-bac-925-best-seller"><span>Hàng
-															bán chạy</span></a></li>
 
-												<li class="level2"><a href="/promotion"><span>Promotion</span></a>
-												</li>
 
-											</ul>
-										</li>
 
 
 
-										<li class="level1 parent item">
-											<p class="h4">
-												<a href="/nhan-bac-cao-cap-cho-nu"><span>Nhẫn bạc</span></a>
-											</p>
-											<ul class="level1">
 
-												<li class="level2"><a href="/nhan-bac-midi-ring"><span>Nhẫn
-															bạc Midi</span></a></li>
+			<li class="nav-item "><a href="/bo-suu-tap" class="nav-link">Bộ
+					sưu tập <i class="fa fa-angle-down" data-toggle="dropdown"></i>
+			</a>
 
-												<li class="level2"><a href="/big-ring"><span>Nhẫn
-															cỡ lớn</span></a></li>
 
-												<li class="level2"><a
-													href="/nhan-ngon-ut-va-nhan-chan-toe-ring-and-little-finger-ring"><span>Nhẫn
-															ngón út</span></a></li>
+				<ul class="dropdown-menu">
 
-												<li class="level2"><a href="/spin-rings-p6"><span>Nhẫn
-															xoay</span></a></li>
 
-												<li class="level2"><a href="/stone-rings"><span>Nhẫn
-															đá</span></a></li>
+				</ul></li>
 
-												<li class="level2"><a href="/man-rings"><span>Nhẫn
-															Nam</span></a></li>
 
-											</ul>
-										</li>
 
 
 
-										<li class="level1 parent item">
-											<p class="h4">
-												<a href="/bong-tai-bac-nu-cao-cap"><span>Bông tai
-														bạc</span></a>
-											</p>
-											<ul class="level1">
 
-												<li class="level2"><a
-													href="/bong-tai-bac-xo-lo-stud-earring"><span>bông
-															bạc xỏ lỗ</span></a></li>
 
-												<li class="level2"><a
-													href="/bong-tai-bac-treo-silver-drop-earring"><span>bông
-															bạc treo</span></a></li>
 
-												<li class="level2"><a
-													href="/khuyen-tai-bac-treo-vanh-earcuff-silver"><span>khuyên
-															vành tai</span></a></li>
+			<li class="nav-item "><a href="#" class="nav-link">Workshop
+					<i class="fa fa-angle-down" data-toggle="dropdown"></i>
+			</a>
 
-												<li class="level2"><a
-													href="/bong-tai-bac-jacket-silver-jacket-earring"><span>bông
-															bạc jacket</span></a></li>
 
-												<li class="level2"><a
-													href="/bong-tai-bac-leo-silver-climber-earring"><span>bông
-															tai leo</span></a></li>
+				<ul class="dropdown-menu">
 
-											</ul>
-										</li>
 
+					<li class="nav-item-lv2"><a class="nav-link"
+						href="/khoa-hoc-1">Khóa học</a></li>
 
 
-										<li class="level1 parent item">
-											<p class="h4">
-												<a href="/day-chuyen-bac"><span>Dây chuyền bạc</span></a>
-											</p>
-											<ul class="level1">
 
-												<li class="level2"><a
-													href="/day-chuyen-bac-silver-necklace"><span>Dây
-															chuyền bán kèm dây</span></a></li>
+					<li class="nav-item-lv2"><a class="nav-link"
+						href="/lien-he-c61">Liên hệ</a></li>
 
-												<li class="level2"><a href="/mat-day-chuyen"><span>Mặt
-															dây bạc (giá chưa tính dây)</span></a></li>
 
-												<li class="level2"><a href="/gemstone-necklaces"><span>Mặt
-															đá (giá chưa tính dây)</span></a></li>
 
-											</ul>
-										</li>
+				</ul></li>
 
 
 
-										<li class="level1 parent item">
-											<p class="h4">
-												<a href="/all-braces"><span>Lắc bạc</span></a>
-											</p>
-											<ul class="level1">
 
-												<li class="level2"><a href="/vong-bac-nu-cao-cap"><span>Vòng
-															bạc</span></a></li>
 
-												<li class="level2"><a
-													href="/lac-tay-bac-nu-bracelets-silver"><span>Lắc
-															tay bạc</span></a></li>
 
-												<li class="level2"><a
-													href="/lac-chan-bac-anklet-silver"><span>Lắc
-															chân bạc</span></a></li>
 
-												<li class="level2"><a href="/charm-bac"><span>Charm
-															bạc</span></a></li>
 
-											</ul>
-										</li>
+			<li class="nav-item "><a href="#" class="nav-link">Bài viết
+					<i class="fa fa-angle-down" data-toggle="dropdown"></i>
+			</a>
 
 
+				<ul class="dropdown-menu">
 
-										<li class="level1 parent item">
-											<p class="h4">
-												<a href="/customize"><span>Thiết kế riêng</span></a>
-											</p>
-											<ul class="level1">
 
-												<li class="level2"><a href="/rings-2"><span>Đặt
-															nhẫn bạc</span></a></li>
+					<li class="nav-item-lv2"><a class="nav-link" href="/meo-nho">Mẹo
+							nhỏ</a></li>
 
-												<li class="level2"><a href="/couple-rings"><span>Đặt
-															nhẫn bạc đôi</span></a></li>
 
-												<li class="level2"><a href="/necklaces-2"><span>Đặt
-															dây chuyền</span></a></li>
 
-												<li class="level2"><a href="/bracelets-2"><span>Đặt
-															lắc tay</span></a></li>
+					<li class="nav-item-lv2"><a class="nav-link" href="/su-kien">Sự
+							kiện</a></li>
 
-												<li class="level2"><a href="/gold"><span>Trang
-															sức Vàng</span></a></li>
 
-												<li class="level2"><a href="/wire-art"><span>Uốn
-															dây nghệ thuật</span></a></li>
 
-											</ul>
-										</li>
+				</ul></li>
 
 
 
-										<li class="level1 parent item">
-											<p class="h4">
-												<a href="/accessories"><span>Phụ kiện rời</span></a>
-											</p>
-											<ul class="level1">
 
-												<li class="level2"><a href="/set-cleaner"><span>Bộ
-															vệ sinh</span></a></li>
 
-												<li class="level2"><a href="/chains"><span>Dây
-															chuyền bán lẻ</span></a></li>
 
-											</ul>
-										</li>
 
 
-									</ul>
-								</div>
-							</div>
-						</div></li>
+			<li class="nav-item "><a href="#" class="nav-link">Thông tin
+					<i class="fa fa-angle-down" data-toggle="dropdown"></i>
+			</a>
 
 
+				<ul class="dropdown-menu">
 
 
+					<li class="nav-item-lv2"><a class="nav-link"
+						href="/huong-dan-do-size-n48">Hướng dẫn đo size</a></li>
 
 
 
+					<li class="nav-item-lv2"><a class="nav-link"
+						href="/bao-hanh-bao-quan">Bảo hành & bảo quản</a></li>
 
-					<li class="nav-item "><a class="nav-link" href="/instagram">Instagram</a></li>
 
 
+					<li class="nav-item-lv2"><a class="nav-link"
+						href="/giao-hang-doi-tra">Giao hàng & đổi trả</a></li>
 
 
 
+					<li class="nav-item-lv2"><a class="nav-link"
+						href="/hinh-thuc-thanh-toan">Hình thức thanh toán</a></li>
 
 
 
-					<li class="nav-item "><a href="/bo-suu-tap" class="nav-link">Bộ
-							sưu tập <i class="fa fa-angle-down" data-toggle="dropdown"></i>
-					</a>
+					<li class="nav-item-lv2"><a class="nav-link"
+						href="/dieu-kien-vip-n52">Điều kiện vip</a></li>
 
 
-						<ul class="dropdown-menu">
 
+				</ul></li>
 
-						</ul></li>
 
 
 
@@ -468,26 +341,27 @@
 
 
 
+			<li class="nav-item "><a href="#" class="nav-link">KAT
+					Jewelry <i class="fa fa-angle-down" data-toggle="dropdown"></i>
+			</a>
 
-					<li class="nav-item "><a href="#" class="nav-link">Workshop
-							<i class="fa fa-angle-down" data-toggle="dropdown"></i>
-					</a>
 
+				<ul class="dropdown-menu">
 
-						<ul class="dropdown-menu">
 
+					<li class="nav-item-lv2"><a class="nav-link"
+						href="/ve-chung-toi">Về chúng tôi</a></li>
 
-							<li class="nav-item-lv2"><a class="nav-link"
-								href="/khoa-hoc-1">Khóa học</a></li>
 
 
+					<li class="nav-item-lv2"><a class="nav-link"
+						href="/chinh-sach-bao-mat-thong-tin-n60">CHÍNH SÁCH BẢO MẬT
+							THÔNG TIN</a></li>
 
-							<li class="nav-item-lv2"><a class="nav-link"
-								href="/lien-he-c61">Liên hệ</a></li>
 
 
+				</ul></li>
 
-						</ul></li>
 
 
 
@@ -495,449 +369,346 @@
 
 
 
+			<li class="nav-item "><a class="nav-link" href="/lien-he-c61">Liên
+					hệ</a></li>
 
-					<li class="nav-item "><a href="#" class="nav-link">Bài
-							viết <i class="fa fa-angle-down" data-toggle="dropdown"></i>
-					</a>
 
 
-						<ul class="dropdown-menu">
+		</ul>
+	</div>
+	<ul id="nav-mobile" class="nav hidden-md hidden-lg container">
 
 
-							<li class="nav-item-lv2"><a class="nav-link" href="/meo-nho">Mẹo
-									nhỏ</a></li>
 
 
+		<li class="nav-item active"><a class="nav-link" href="/">Trang
+				chủ</a></li>
 
-							<li class="nav-item-lv2"><a class="nav-link" href="/su-kien">Sự
-									kiện</a></li>
 
 
 
-						</ul></li>
 
+		<li class="nav-item "><a href="#" class="nav-link">Trang sức
+				<i class="fa faa fa-angle-right"></i>
+		</a>
 
+			<ul class="dropdown-menu">
 
 
-
-
-
-
-					<li class="nav-item "><a href="#" class="nav-link">Thông
-							tin <i class="fa fa-angle-down" data-toggle="dropdown"></i>
-					</a>
-
-
-						<ul class="dropdown-menu">
-
-
-							<li class="nav-item-lv2"><a class="nav-link"
-								href="/huong-dan-do-size-n48">Hướng dẫn đo size</a></li>
-
-
-
-							<li class="nav-item-lv2"><a class="nav-link"
-								href="/bao-hanh-bao-quan">Bảo hành & bảo quản</a></li>
-
-
-
-							<li class="nav-item-lv2"><a class="nav-link"
-								href="/giao-hang-doi-tra">Giao hàng & đổi trả</a></li>
-
-
-
-							<li class="nav-item-lv2"><a class="nav-link"
-								href="/hinh-thuc-thanh-toan">Hình thức thanh toán</a></li>
-
-
-
-							<li class="nav-item-lv2"><a class="nav-link"
-								href="/dieu-kien-vip-n52">Điều kiện vip</a></li>
-
-
-
-						</ul></li>
-
-
-
-
-
-
-
-
-					<li class="nav-item "><a href="#" class="nav-link">KAT
-							Jewelry <i class="fa fa-angle-down" data-toggle="dropdown"></i>
-					</a>
-
-
-						<ul class="dropdown-menu">
-
-
-							<li class="nav-item-lv2"><a class="nav-link"
-								href="/ve-chung-toi">Về chúng tôi</a></li>
-
-
-
-							<li class="nav-item-lv2"><a class="nav-link"
-								href="/chinh-sach-bao-mat-thong-tin-n60">CHÍNH SÁCH BẢO MẬT
-									THÔNG TIN</a></li>
-
-
-
-						</ul></li>
-
-
-
-
-
-
-
-
-					<li class="nav-item "><a class="nav-link" href="/lien-he-c61">Liên
-							hệ</a></li>
-
-
-
-				</ul>
-			</div>
-			<ul id="nav-mobile" class="nav hidden-md hidden-lg container">
-
-
-
-
-				<li class="nav-item active"><a class="nav-link" href="/">Trang
-						chủ</a></li>
-
-
-
-
-
-				<li class="nav-item "><a href="#" class="nav-link">Trang
-						sức <i class="fa faa fa-angle-right"></i>
-				</a>
+				<li class="dropdown-submenu nav-item-lv2"><a class="nav-link"
+					href="/what-s-new">What’s new <i class="fa faa fa-angle-right"></i></a>
 
 					<ul class="dropdown-menu">
 
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/new-collection">New Collections</a></li>
 
-						<li class="dropdown-submenu nav-item-lv2"><a class="nav-link"
-							href="/what-s-new">What’s new <i
-								class="fa faa fa-angle-right"></i></a>
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/trang-suc-bac-925-best-seller">Hàng bán chạy</a></li>
 
-							<ul class="dropdown-menu">
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/new-collection">New Collections</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/trang-suc-bac-925-best-seller">Hàng bán chạy</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/promotion">Promotion</a></li>
-
-							</ul></li>
-
-
-
-						<li class="dropdown-submenu nav-item-lv2"><a class="nav-link"
-							href="/nhan-bac-cao-cap-cho-nu">Nhẫn bạc <i
-								class="fa faa fa-angle-right"></i></a>
-
-							<ul class="dropdown-menu">
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/nhan-bac-midi-ring">Nhẫn bạc Midi</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/big-ring">Nhẫn cỡ lớn</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/nhan-ngon-ut-va-nhan-chan-toe-ring-and-little-finger-ring">Nhẫn
-										ngón út</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/spin-rings-p6">Nhẫn xoay</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/stone-rings">Nhẫn đá</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/man-rings">Nhẫn Nam</a></li>
-
-							</ul></li>
-
-
-
-						<li class="dropdown-submenu nav-item-lv2"><a class="nav-link"
-							href="/bong-tai-bac-nu-cao-cap">Bông tai bạc <i
-								class="fa faa fa-angle-right"></i></a>
-
-							<ul class="dropdown-menu">
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/bong-tai-bac-xo-lo-stud-earring">bông bạc xỏ lỗ</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/bong-tai-bac-treo-silver-drop-earring">bông bạc treo</a>
-								</li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/khuyen-tai-bac-treo-vanh-earcuff-silver">khuyên vành
-										tai</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/bong-tai-bac-jacket-silver-jacket-earring">bông bạc
-										jacket</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/bong-tai-bac-leo-silver-climber-earring">bông tai
-										leo</a></li>
-
-							</ul></li>
-
-
-
-						<li class="dropdown-submenu nav-item-lv2"><a class="nav-link"
-							href="/day-chuyen-bac">Dây chuyền bạc <i
-								class="fa faa fa-angle-right"></i></a>
-
-							<ul class="dropdown-menu">
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/day-chuyen-bac-silver-necklace">Dây chuyền bán kèm
-										dây</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/mat-day-chuyen">Mặt dây bạc (giá chưa tính dây)</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/gemstone-necklaces">Mặt đá (giá chưa tính dây)</a></li>
-
-							</ul></li>
-
-
-
-						<li class="dropdown-submenu nav-item-lv2"><a class="nav-link"
-							href="/all-braces">Lắc bạc <i class="fa faa fa-angle-right"></i></a>
-
-							<ul class="dropdown-menu">
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/vong-bac-nu-cao-cap">Vòng bạc</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/lac-tay-bac-nu-bracelets-silver">Lắc tay bạc</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/lac-chan-bac-anklet-silver">Lắc chân bạc</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/charm-bac">Charm bạc</a></li>
-
-							</ul></li>
-
-
-
-						<li class="dropdown-submenu nav-item-lv2"><a class="nav-link"
-							href="/customize">Thiết kế riêng <i
-								class="fa faa fa-angle-right"></i></a>
-
-							<ul class="dropdown-menu">
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/rings-2">Đặt nhẫn bạc</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/couple-rings">Đặt nhẫn bạc đôi</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/necklaces-2">Đặt dây chuyền</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/bracelets-2">Đặt lắc tay</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link" href="/gold">Trang
-										sức Vàng</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/wire-art">Uốn dây nghệ thuật</a></li>
-
-							</ul></li>
-
-
-
-						<li class="dropdown-submenu nav-item-lv2"><a class="nav-link"
-							href="/accessories">Phụ kiện rời <i
-								class="fa faa fa-angle-right"></i></a>
-
-							<ul class="dropdown-menu">
-
-								<li class="nav-item-lv3"><a class="nav-link"
-									href="/set-cleaner">Bộ vệ sinh</a></li>
-
-								<li class="nav-item-lv3"><a class="nav-link" href="/chains">Dây
-										chuyền bán lẻ</a></li>
-
-							</ul></li>
-
-
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/promotion">Promotion</a></li>
 
 					</ul></li>
 
 
 
-
-
-
-				<li class="nav-item "><a class="nav-link" href="/instagram">Instagram</a></li>
-
-
-
-
-
-				<li class="nav-item "><a href="/bo-suu-tap" class="nav-link">Bộ
-						sưu tập <i class="fa faa fa-angle-right"></i>
-				</a>
+				<li class="dropdown-submenu nav-item-lv2"><a class="nav-link"
+					href="/nhan-bac-cao-cap-cho-nu">Nhẫn bạc <i
+						class="fa faa fa-angle-right"></i></a>
 
 					<ul class="dropdown-menu">
 
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/nhan-bac-midi-ring">Nhẫn bạc Midi</a></li>
+
+						<li class="nav-item-lv3"><a class="nav-link" href="/big-ring">Nhẫn
+								cỡ lớn</a></li>
+
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/nhan-ngon-ut-va-nhan-chan-toe-ring-and-little-finger-ring">Nhẫn
+								ngón út</a></li>
+
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/spin-rings-p6">Nhẫn xoay</a></li>
+
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/stone-rings">Nhẫn đá</a></li>
+
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/man-rings">Nhẫn Nam</a></li>
 
 					</ul></li>
 
 
 
-
-
-
-				<li class="nav-item "><a href="#" class="nav-link">Workshop
-						<i class="fa faa fa-angle-right"></i>
-				</a>
+				<li class="dropdown-submenu nav-item-lv2"><a class="nav-link"
+					href="/bong-tai-bac-nu-cao-cap">Bông tai bạc <i
+						class="fa faa fa-angle-right"></i></a>
 
 					<ul class="dropdown-menu">
 
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/bong-tai-bac-xo-lo-stud-earring">bông bạc xỏ lỗ</a></li>
 
-						<li class="nav-item-lv2"><a class="nav-link"
-							href="/khoa-hoc-1">Khóa học</a></li>
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/bong-tai-bac-treo-silver-drop-earring">bông bạc treo</a></li>
 
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/khuyen-tai-bac-treo-vanh-earcuff-silver">khuyên vành
+								tai</a></li>
 
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/bong-tai-bac-jacket-silver-jacket-earring">bông bạc
+								jacket</a></li>
 
-						<li class="nav-item-lv2"><a class="nav-link"
-							href="/lien-he-c61">Liên hệ</a></li>
-
-
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/bong-tai-bac-leo-silver-climber-earring">bông tai leo</a></li>
 
 					</ul></li>
 
 
 
-
-
-
-				<li class="nav-item "><a href="#" class="nav-link">Bài viết
-						<i class="fa faa fa-angle-right"></i>
-				</a>
+				<li class="dropdown-submenu nav-item-lv2"><a class="nav-link"
+					href="/day-chuyen-bac">Dây chuyền bạc <i
+						class="fa faa fa-angle-right"></i></a>
 
 					<ul class="dropdown-menu">
 
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/day-chuyen-bac-silver-necklace">Dây chuyền bán kèm dây</a></li>
 
-						<li class="nav-item-lv2"><a class="nav-link" href="/meo-nho">Mẹo
-								nhỏ</a></li>
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/mat-day-chuyen">Mặt dây bạc (giá chưa tính dây)</a></li>
 
-
-
-						<li class="nav-item-lv2"><a class="nav-link" href="/su-kien">Sự
-								kiện</a></li>
-
-
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/gemstone-necklaces">Mặt đá (giá chưa tính dây)</a></li>
 
 					</ul></li>
 
 
 
-
-
-
-				<li class="nav-item "><a href="#" class="nav-link">Thông
-						tin <i class="fa faa fa-angle-right"></i>
-				</a>
+				<li class="dropdown-submenu nav-item-lv2"><a class="nav-link"
+					href="/all-braces">Lắc bạc <i class="fa faa fa-angle-right"></i></a>
 
 					<ul class="dropdown-menu">
 
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/vong-bac-nu-cao-cap">Vòng bạc</a></li>
 
-						<li class="nav-item-lv2"><a class="nav-link"
-							href="/huong-dan-do-size-n48">Hướng dẫn đo size</a></li>
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/lac-tay-bac-nu-bracelets-silver">Lắc tay bạc</a></li>
 
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/lac-chan-bac-anklet-silver">Lắc chân bạc</a></li>
 
-
-						<li class="nav-item-lv2"><a class="nav-link"
-							href="/bao-hanh-bao-quan">Bảo hành & bảo quản</a></li>
-
-
-
-						<li class="nav-item-lv2"><a class="nav-link"
-							href="/giao-hang-doi-tra">Giao hàng & đổi trả</a></li>
-
-
-
-						<li class="nav-item-lv2"><a class="nav-link"
-							href="/hinh-thuc-thanh-toan">Hình thức thanh toán</a></li>
-
-
-
-						<li class="nav-item-lv2"><a class="nav-link"
-							href="/dieu-kien-vip-n52">Điều kiện vip</a></li>
-
-
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/charm-bac">Charm bạc</a></li>
 
 					</ul></li>
 
 
 
-
-
-
-				<li class="nav-item "><a href="#" class="nav-link">KAT
-						Jewelry <i class="fa faa fa-angle-right"></i>
-				</a>
+				<li class="dropdown-submenu nav-item-lv2"><a class="nav-link"
+					href="/customize">Thiết kế riêng <i
+						class="fa faa fa-angle-right"></i></a>
 
 					<ul class="dropdown-menu">
 
+						<li class="nav-item-lv3"><a class="nav-link" href="/rings-2">Đặt
+								nhẫn bạc</a></li>
 
-						<li class="nav-item-lv2"><a class="nav-link"
-							href="/ve-chung-toi">Về chúng tôi</a></li>
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/couple-rings">Đặt nhẫn bạc đôi</a></li>
 
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/necklaces-2">Đặt dây chuyền</a></li>
 
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/bracelets-2">Đặt lắc tay</a></li>
 
-						<li class="nav-item-lv2"><a class="nav-link"
-							href="/chinh-sach-bao-mat-thong-tin-n60">CHÍNH SÁCH BẢO MẬT
-								THÔNG TIN</a></li>
+						<li class="nav-item-lv3"><a class="nav-link" href="/gold">Trang
+								sức Vàng</a></li>
 
-
+						<li class="nav-item-lv3"><a class="nav-link" href="/wire-art">Uốn
+								dây nghệ thuật</a></li>
 
 					</ul></li>
 
 
 
+				<li class="dropdown-submenu nav-item-lv2"><a class="nav-link"
+					href="/accessories">Phụ kiện rời <i
+						class="fa faa fa-angle-right"></i></a>
+
+					<ul class="dropdown-menu">
+
+						<li class="nav-item-lv3"><a class="nav-link"
+							href="/set-cleaner">Bộ vệ sinh</a></li>
+
+						<li class="nav-item-lv3"><a class="nav-link" href="/chains">Dây
+								chuyền bán lẻ</a></li>
+
+					</ul></li>
 
 
 
-				<li class="nav-item "><a class="nav-link" href="/lien-he-c61">Liên
-						hệ</a></li>
+			</ul></li>
 
 
 
 
 
-				<li class="nav-item"
-					style="margin-top: 10px; border-top: 1px solid #ebebeb; padding-top: 10px;"><a
-					href="/account/register"><i class="fa fa-unlock-alt"></i> Đăng
-						ký</a></li>
 
-				<li class="nav-item"><a href="/account/login"><i
-						class="fa fa-user"></i> Đăng nhập</a></li>
+		<li class="nav-item "><a class="nav-link" href="/instagram">Instagram</a></li>
 
-				<div id="social_login_widget"></div>
-			</ul>
-		</nav>
+
+
+
+
+		<li class="nav-item "><a href="/bo-suu-tap" class="nav-link">Bộ
+				sưu tập <i class="fa faa fa-angle-right"></i>
+		</a>
+
+			<ul class="dropdown-menu">
+
+
+			</ul></li>
+
+
+
+
+
+
+		<li class="nav-item "><a href="#" class="nav-link">Workshop <i
+				class="fa faa fa-angle-right"></i>
+		</a>
+
+			<ul class="dropdown-menu">
+
+
+				<li class="nav-item-lv2"><a class="nav-link" href="/khoa-hoc-1">Khóa
+						học</a></li>
+
+
+
+				<li class="nav-item-lv2"><a class="nav-link"
+					href="/lien-he-c61">Liên hệ</a></li>
+
+
+
+			</ul></li>
+
+
+
+
+
+
+		<li class="nav-item "><a href="#" class="nav-link">Bài viết <i
+				class="fa faa fa-angle-right"></i>
+		</a>
+
+			<ul class="dropdown-menu">
+
+
+				<li class="nav-item-lv2"><a class="nav-link" href="/meo-nho">Mẹo
+						nhỏ</a></li>
+
+
+
+				<li class="nav-item-lv2"><a class="nav-link" href="/su-kien">Sự
+						kiện</a></li>
+
+
+
+			</ul></li>
+
+
+
+
+
+
+		<li class="nav-item "><a href="#" class="nav-link">Thông tin
+				<i class="fa faa fa-angle-right"></i>
+		</a>
+
+			<ul class="dropdown-menu">
+
+
+				<li class="nav-item-lv2"><a class="nav-link"
+					href="/huong-dan-do-size-n48">Hướng dẫn đo size</a></li>
+
+
+
+				<li class="nav-item-lv2"><a class="nav-link"
+					href="/bao-hanh-bao-quan">Bảo hành & bảo quản</a></li>
+
+
+
+				<li class="nav-item-lv2"><a class="nav-link"
+					href="/giao-hang-doi-tra">Giao hàng & đổi trả</a></li>
+
+
+
+				<li class="nav-item-lv2"><a class="nav-link"
+					href="/hinh-thuc-thanh-toan">Hình thức thanh toán</a></li>
+
+
+
+				<li class="nav-item-lv2"><a class="nav-link"
+					href="/dieu-kien-vip-n52">Điều kiện vip</a></li>
+
+
+
+			</ul></li>
+
+
+
+
+
+
+		<li class="nav-item "><a href="#" class="nav-link">KAT
+				Jewelry <i class="fa faa fa-angle-right"></i>
+		</a>
+
+			<ul class="dropdown-menu">
+
+
+				<li class="nav-item-lv2"><a class="nav-link"
+					href="/ve-chung-toi">Về chúng tôi</a></li>
+
+
+
+				<li class="nav-item-lv2"><a class="nav-link"
+					href="/chinh-sach-bao-mat-thong-tin-n60">CHÍNH SÁCH BẢO MẬT
+						THÔNG TIN</a></li>
+
+
+
+			</ul></li>
+
+
+
+
+
+
+		<li class="nav-item "><a class="nav-link" href="/lien-he-c61">Liên
+				hệ</a></li>
+
+
+
+
+
+		<li class="nav-item"
+			style="margin-top: 10px; border-top: 1px solid #ebebeb; padding-top: 10px;"><a
+			href="/account/register"><i class="fa fa-unlock-alt"></i> Đăng ký</a></li>
+
+		<li class="nav-item"><a href="/account/login"><i
+				class="fa fa-user"></i> Đăng nhập</a></li>
+
+		<div id="social_login_widget"></div>
+	</ul>
+</nav>
 <style>
 #body_overlay {
 	position: fixed;
@@ -1020,7 +791,7 @@
 <link
 	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/iwish.css?1628876908532"
 	rel="stylesheet" type="text/css" />
-	
+
 
 <!-- Header JS -->
 

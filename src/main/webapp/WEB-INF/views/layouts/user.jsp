@@ -4,7 +4,9 @@
 	prefix="decorator"%>
 <!DOCTYPE html>
 <html lang="vi">
-
+<head>
+<decorator:head />
+</head>
 <body>
 
 	<%@include file="/WEB-INF/views/layouts/user/header.jsp"%>
@@ -250,7 +252,11 @@
 
 
 
+
+
 :rotate(359deg)
+
+
 
 
 
@@ -265,7 +271,11 @@ transform
 
 
 
+
+
 :rotate(359deg)
+
+
 
 
 
@@ -288,7 +298,11 @@ keyframes fa-spin { 0%{
 
 
 
+
+
 :rotate(359deg)
+
+
 
 
 
@@ -303,7 +317,11 @@ transform
 
 
 
+
+
 :rotate(359deg)
+
+
 
 
 

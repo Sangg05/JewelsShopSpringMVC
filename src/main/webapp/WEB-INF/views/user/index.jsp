@@ -10,77 +10,21 @@
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6LB329"
 			height="0" width="0" style="display: none; visibility: hidden"></iframe>
 	</noscript>
-
+<h1>${ products.size() }</h1>
 	<h1 class="hidden">KaT Jewelry - Trang sức bạc 925 - Design & made
 		to order</h1>
-
 	<section class="awe-section-1">
 		<div class="section section-slider relative">
-
 			<div class="home-slider swiper-container">
 				<div class="swiper-wrapper">
-
-
-					<div class="swiper-slide">
-						<a class="clearfix"> <img
-							src="<c:url value='/assets/user/images/slider_1.png'/>"
-							width="100%" alt="slider-1">
-
-						</a>
-						<!--<a href="" class="clearfix">
-
-					<img src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/slider_1.jpg?1628876908532" width="100%" 
-					data-lazyload="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/slider_1.jpg?1628876908532" alt="slider-1">
-
-				</a>	-->
-					</div>
-
-
-					<div class="swiper-slide">
-						<a class="clearfix"> <img
-							src="<c:url value='/assets/user/images/slider_2.png'/>"
-							width="100%" alt="slider-2">
-
-						</a>
-						<!--<a href="" class="clearfix">
-
-					<img src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/slider_2.jpg?1628876908532" width="100%" data-lazyload="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/slider_2.jpg?1628876908532" alt="slider-2">
-
-				</a>	-->
-					</div>
-
-
-
-					<div class="swiper-slide">
-						<a class="clearfix"> <img
-							src="<c:url value='/assets/user/images/slider_3.png'/>"
-							width="100%" alt="slider-3">
-
-						</a>
-						<!--<a href="" class="clearfix">
-
-					<img src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/slider_3.jpg?1628876908532" width="100%" data-lazyload="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/slider_3.jpg?1628876908532" alt="slider-3">
-
-				</a>	-->
-					</div>
-
-
-
-
-					<div class="swiper-slide">
-						<a class="clearfix"> <img
-							src="<c:url value='/assets/user/images/slider_4.png'/>"
-							width="100%" alt="slider-4">
-
-						</a>
-						<!--<a href="" class="clearfix">
-
-					<img src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/slider_4.jpg?1628876908532" width="100%" data-lazyload="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/slider_4.jpg?1628876908532" alt="slider-4">
-
-				</a>	-->
-					</div>
-
-
+					<c:forEach var="item" items="${ slides }">
+						<div class="swiper-slide">
+							<a class="clearfix"> <img
+								src="<c:url value='/assets/user/images/slides/${item.img}'/>"
+								width="100%" alt="slider-1">
+							</a>
+						</div>
+					</c:forEach>
 				</div>
 				<div class="swiper-button-next"></div>
 				<div class="swiper-button-prev"></div>
@@ -110,7 +54,6 @@
 					<div class="col-md-4 col-sm-6">
 						<a href="https://m.me/katjewelry"> <img
 							src="<c:url value='/assets/user/images/service_about_2.png'/>"
-							
 							alt="Đeo trang sức là cách thể hiện bạn mà không cần một lời nói nào."
 							class="img-responsive center-block" />
 						</a>
@@ -225,19 +168,17 @@
 
 						<!-- Phần hiển thị từng sản phẩm  -->
 						<div class="product-box product-box-2">
-						
+
 							<div class="product-thumbnail relative">
 								<div class="product-image-flip">
 									<a class="db" href="/r-triple-gem" title="R TRIPLE GEM"> <img
 										src="<c:url value='/assets/user/images/section-5-1.png'/>"
-										
 										alt="R TRIPLE GEM" class="img-responsive center-block" />
 
 
 									</a> <a class="db pa back oh" href="/r-triple-gem"
 										title="R TRIPLE GEM"> <img
 										src="<c:url value='/assets/user/images/section-5-1.png'/>"
-										
 										alt="R TRIPLE GEM" class="img-responsive center-block" />
 
 
@@ -288,21 +229,19 @@
 
 							</div>
 						</div>
-						
+
 						<!-- Phần hiển thị từng sản phẩm  -->
 						<div class="product-box product-box-2">
 							<div class="product-thumbnail relative">
 								<div class="product-image-flip">
 									<a class="db" href="/r-triple-gem" title="R TRIPLE GEM"> <img
 										src="<c:url value='/assets/user/images/section-5-2.png'/>"
-										
 										alt="R TRIPLE GEM" class="img-responsive center-block" />
 
 
 									</a> <a class="db pa back oh" href="/r-triple-gem"
 										title="R TRIPLE GEM"> <img
 										src="<c:url value='/assets/user/images/section-5-2.png'/>"
-										
 										alt="R TRIPLE GEM" class="img-responsive center-block" />
 
 
@@ -359,21 +298,19 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<!-- Phần hiển thị từng sản phẩm  -->
 						<div class="product-box product-box-2">
 							<div class="product-thumbnail relative">
 								<div class="product-image-flip">
 									<a class="db" href="/r-triple-gem" title="R TRIPLE GEM"> <img
 										src="<c:url value='/assets/user/images/section-5-3.png'/>"
-										
 										alt="R TRIPLE GEM" class="img-responsive center-block" />
 
 
 									</a> <a class="db pa back oh" href="/r-triple-gem"
 										title="R TRIPLE GEM"> <img
 										src="<c:url value='/assets/user/images/section-5-3.png'/>"
-										
 										alt="R TRIPLE GEM" class="img-responsive center-block" />
 
 
@@ -432,14 +369,12 @@
 								<div class="product-image-flip">
 									<a class="db" href="/r-triple-gem" title="R TRIPLE GEM"> <img
 										src="<c:url value='/assets/user/images/section-5-4.png'/>"
-										
 										alt="R TRIPLE GEM" class="img-responsive center-block" />
 
 
 									</a> <a class="db pa back oh" href="/r-triple-gem"
 										title="R TRIPLE GEM"> <img
 										src="<c:url value='/assets/user/images/section-5-4.png'/>"
-										
 										alt="R TRIPLE GEM" class="img-responsive center-block" />
 
 
@@ -450,7 +385,7 @@
 									<form action="/cart/add" method="post"
 										class="variants form-nut-grid"
 										data-id="product-actions-11677428"
-										enctype="multipart/form-data"> 
+										enctype="multipart/form-data">
 
 										<div>
 
@@ -508,7 +443,6 @@
 								<div class="product-image-flip">
 									<a class="db" href="/r-triple-gem" title="R TRIPLE GEM"> <img
 										src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/rolling.svg?1628876908532"
-										
 										alt="R TRIPLE GEM" class="img-responsive center-block" />
 
 
@@ -589,14 +523,12 @@
 								<div class="product-image-flip">
 									<a class="db" href="/r-triple-gem" title="R TRIPLE GEM"> <img
 										src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/rolling.svg?1628876908532"
-										
 										alt="R TRIPLE GEM" class="img-responsive center-block" />
 
 
 									</a> <a class="db pa back oh" href="/r-triple-gem"
 										title="R TRIPLE GEM"> <img
 										src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/rolling.svg?1628876908532"
-										
 										alt="R TRIPLE GEM" class="img-responsive center-block" />
 
 
@@ -673,14 +605,12 @@
 
 										<img
 										src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/rolling.svg?1628876908532"
-										
 										alt="R MULTI CIRCLE" class="img-responsive center-block" />
 
 
 									</a> <a class="db pa back oh" href="/r-multi-circle"
 										title="R MULTI CIRCLE"> <img
 										src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/rolling.svg?1628876908532"
-										
 										alt="R MULTI CIRCLE" class="img-responsive center-block" />
 
 
@@ -756,7 +686,6 @@
 									<a class="db" href="/r-double-line-01-1"
 										title="Nhẫn R DOUBLE LINE 01"> <img
 										src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/rolling.svg?1628876908532"
-										
 										alt="Nhẫn R DOUBLE LINE 01"
 										class="img-responsive center-block" />
 
@@ -764,7 +693,6 @@
 									</a> <a class="db pa back oh" href="/r-double-line-01-1"
 										title="Nhẫn R DOUBLE LINE 01"> <img
 										src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/rolling.svg?1628876908532"
-										
 										alt="Nhẫn R DOUBLE LINE 01"
 										class="img-responsive center-block" />
 
@@ -837,7 +765,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 	</section>
 
 
@@ -862,7 +790,6 @@
 
 											<picture> <img
 												src="<c:url value='/assets/user/images/section-6-1.png'/>"
-												
 												alt="Top 10 món Quà Tặng Sinh Nhật Cho Bạn Gái Ý Nghĩa - Cao Cấp - Độc Đáo">
 											</picture>
 
@@ -877,7 +804,7 @@
 									</div>
 								</article>
 							</div>
-							
+
 							<!-- Blog Item -->
 							<div class="item">
 								<article class="blog-item">
@@ -917,7 +844,7 @@
 									</div>
 								</article>
 							</div>
-							
+
 							<!-- Blog Item -->
 							<div class="item">
 								<article class="blog-item">
@@ -1086,8 +1013,8 @@
 							</div>
 
 						</div>
-						
-						</div>
+
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1111,22 +1038,18 @@
 					<div class="col-md-4 no-padding-right col-s">
 						<a href="https://www.instagram.com/p/CMPJKbhLMdD/"> <img
 							src="<c:url value='/assets/user/images/instagram_image_1.png'/>"
-							
 							class="img-responsive"
 							alt="KaT Jewelry - Trang sức bạc 925 - Design & made to order" />
 						</a> <a href="https://www.instagram.com/p/CMYJ3E9LXrA/"> <img
 							src="<c:url value='/assets/user/images/instagram_image_2.png'/>"
-							
 							class="img-responsive"
 							alt="KaT Jewelry - Trang sức bạc 925 - Design & made to order" />
 						</a> <a href="https://www.instagram.com/p/CMlB249rn-k/"> <img
 							src="<c:url value='/assets/user/images/instagram_image_3.png'/>"
-							
 							class="img-responsive"
 							alt="KaT Jewelry - Trang sức bạc 925 - Design & made to order" />
 						</a> <a href="https://www.instagram.com/p/CMZVYhiMmAw"> <img
 							src="<c:url value='/assets/user/images/instagram_image_4.png'/>"
-							
 							class="img-responsive"
 							alt="KaT Jewelry - Trang sức bạc 925 - Design & made to order" />
 						</a>
@@ -1134,7 +1057,6 @@
 					<div class="col-md-4 no-padding">
 						<a href="https://www.instagram.com/p/CMwi_tvsbL7/"> <img
 							src="<c:url value='/assets/user/images/instagram_image_5.png'/>"
-							
 							class="img-responsive"
 							alt="KaT Jewelry - Trang sức bạc 925 - Design & made to order" />
 						</a>
@@ -1142,22 +1064,18 @@
 					<div class="col-md-4 no-padding-left col-s">
 						<a href="https://www.instagram.com/p/CM8M_57H6Ow/"> <img
 							src="<c:url value='/assets/user/images/instagram_image_6.png'/>"
-							
 							class="img-responsive"
 							alt="KaT Jewelry - Trang sức bạc 925 - Design & made to order" />
 						</a> <a href="https://www.instagram.com/p/CMvVANkFbWJ/"> <img
 							src="<c:url value='/assets/user/images/instagram_image_7.png'/>"
-							
 							class="img-responsive"
 							alt="KaT Jewelry - Trang sức bạc 925 - Design & made to order" />
 						</a> <a href="https://www.instagram.com/p/CNDF3FKAxJS/"> <img
 							src="<c:url value='/assets/user/images/instagram_image_8.png'/>"
-							
 							class="img-responsive"
 							alt="KaT Jewelry - Trang sức bạc 925 - Design & made to order" />
 						</a> <a href="https://www.instagram.com/p/CND7YqOl-Yr/"> <img
 							src="<c:url value='/assets/user/images/instagram_image_9.png'/>"
-							
 							class="img-responsive"
 							alt="KaT Jewelry - Trang sức bạc 925 - Design & made to order" />
 						</a>
