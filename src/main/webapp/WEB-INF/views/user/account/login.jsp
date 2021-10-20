@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,29 +41,30 @@
 		<h1 class="title-head">
 			<span>Đăng nhập tài khoản</span>
 		</h1>
+		
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="page-login margin-bottom-30">
 					<div id="login">
 						<span> Nếu bạn đã có tài khoản, đăng nhập tại đây. </span>
-						<form accept-charset="utf-8" action="/account/login"
-							id="customer_login" method="post">
-							<input name="FormType" type="hidden" value="customer_login" /> <input
-								name="utf8" type="hidden" value="true" />
+						<form:form action="dang-nhap" method="post" modelAttribute="user">
+							<input name="FormType" type="hidden" value="customer_login" />
+							<input name="utf8" type="hidden" value="true" />
 							<div class="form-signup"></div>
 							<div class="form-signup clearfix">
 								<fieldset class="form-group">
-									<label>Email <span class="required">*</span></label> <input
-										type="email"
+									<label>Email <span class="required">*</span></label>
+									<form:input type="email"
 										pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"
 										class="form-control form-control-lg" value="" name="email"
-										id="customer_email" placeholder="Email" Required>
+										id="email" placeholder="" required="" path="email" />
 								</fieldset>
 								<fieldset class="form-group">
-									<label>Mật khẩu <span class="required">*</span></label> <input
-										type="password" class="form-control form-control-lg" value=""
-										name="password" id="customer_password" placeholder="Mật khẩu"
-										Required>
+									<label>Mật khẩu <span class="required">*</span>
+									</label>
+									<form:input type="password"
+										class="form-control form-control-lg" value="" name="password"
+										id="password" placeholder="" required="" path="password" />
 								</fieldset>
 
 								<div id="social_login_widget"></div>
@@ -76,7 +79,7 @@
 							</div>
 							<input name="returnUrl" type="hidden"
 								value="https://katjewelry.vn/r-midi-triple-gem" />
-						</form>
+						</form:form>
 					</div>
 
 

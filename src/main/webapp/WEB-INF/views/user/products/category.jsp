@@ -123,16 +123,16 @@
 
 
 											<div class="product-image-flip">
-												<a class="db" href="/e-stud-big-circle-multi-drop-ball"
-													title="E STUD BIG CIRCLE MULTI DROP BALL"> <img
+												<a class="db" href="/JewelsShop/product/${item.id}"
+													title="${item.name}"> <img
 													src="<c:url value='/assets/user/images/product/${item.image}'/>"
 													alt="NEW COLLECTIONS - E STUD BIG CIRCLE MULTI DROP BALL"
 													class="img-responsive center-block" />
 
 
 												</a> <a class="db pa back oh"
-													href="/e-stud-big-circle-multi-drop-ball"
-													title="E STUD BIG CIRCLE MULTI DROP BALL"> <img
+													href="/JewelsShop/product/${item.id}"
+													title="${item.name}"> <img
 													src="<c:url value='/assets/user/images/product/${item.image}'/>"
 													alt="NEW COLLECTIONS - E STUD BIG CIRCLE MULTI DROP BALL"
 													class="img-responsive center-block" />
@@ -143,7 +143,7 @@
 												<div class="htheme_product_overlay_fade"></div>
 											</div>
 											<div class="product-action clearfix">
-												<form action="/cart/add" method="post"
+												<form action="<c:url value="/AddCart/${item.id}"/>" method="get"
 													class="variants form-nut-grid"
 													data-id="product-actions-18810516"
 													enctype="multipart/form-data">
@@ -157,19 +157,21 @@
 															class="fa fa-heart"></i></a> <a data-toggle="tooltip"
 															title="Bỏ yêu thích"
 															class="btn btn-circle iWishAdded iwishAddWrapper iWishHidden"
-															href="javascript:;" data-customer-id="0"
+															href="#" data-customer-id="0"
 															data-product="18810516" data-variant="44240090"><i
 															class="fa fa-heart"></i></a>
 
 
 														<button class="btn btn-circle left-to "
-															data-toggle="tooltip" title="Hết hàng" disabled>
+															data-toggle="tooltip" title="Thêm giỏ hàng" >
 															<i class="fa fa-shopping-basket"></i>
 														</button>
+														
+														
 
 
 														<a data-toggle="tooltip" title="Xem nhanh"
-															href="/e-stud-big-circle-multi-drop-ball"
+															href="/JewelsShop/product/${item.id}"
 															data-handle="e-stud-big-circle-multi-drop-ball"
 															class="btn-circle btn_view btn  right-to quick-view">
 															<i class="fa fa-search-plus"></i>
@@ -181,7 +183,7 @@
 										</div>
 										<div class="product-info a-center">
 											<p class="product-name">
-												<a href="/e-stud-big-circle-multi-drop-ball"
+												<a href="/JewelsShop/product/${item.id}"
 													title="E STUD BIG CIRCLE MULTI DROP BALL"
 													class="line-clamp">${ item.name }</a>
 											</p>

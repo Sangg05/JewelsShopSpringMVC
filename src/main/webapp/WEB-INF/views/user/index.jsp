@@ -10,7 +10,6 @@
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6LB329"
 			height="0" width="0" style="display: none; visibility: hidden"></iframe>
 	</noscript>
-<h1>${ products.size() }</h1>
 	<h1 class="hidden">KaT Jewelry - Trang sức bạc 925 - Design & made
 		to order</h1>
 	<section class="awe-section-1">

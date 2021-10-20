@@ -38,7 +38,7 @@
 
 	<script
 		src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/quickview.js?1628876908532"></script>
-
+	<decorator:getProperty property="page.script"></decorator:getProperty>
 
 	<div id="quick-view-product" class="quickview-product"
 		style="display: none;">
@@ -254,7 +254,11 @@
 
 
 
+
+
 :rotate(359deg)
+
+
 
 
 
@@ -273,7 +277,11 @@ transform
 
 
 
+
+
 :rotate(359deg)
+
+
 
 
 
@@ -300,7 +308,11 @@ keyframes fa-spin { 0%{
 
 
 
+
+
 :rotate(359deg)
+
+
 
 
 
@@ -319,7 +331,11 @@ transform
 
 
 
+
+
 :rotate(359deg)
+
+
 
 
 

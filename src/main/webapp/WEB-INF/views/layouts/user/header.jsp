@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <head>
 <meta name="theme-color" content="#2E1C11" />
 <meta charset="UTF-8">
@@ -97,8 +99,6 @@
 		</div>
 		<div class="social-top hidden-sm hidden-xs">
 			<ul class="inline-list social-icons">
-
-
 				<li><a class="icon-fallback-text"
 					href="https://www.facebook.com/katjewelry/" target="_blank"
 					rel="noopener"> <span class="fa fa-facebooks"
@@ -153,22 +153,97 @@
 					</ul>
 					<a class="icon-cricle" href=""><i class="fa fa-searchs"></i></a>
 				</div>
-				<div class="inline-block account-dr hidden-sm">
-					<a class="icon-cricle" href="/account"><i class="fa fa-userss"></i></a>
-					<ul class="account-ct">
 
-						<li class="hidden-sm hidden-xs"><a href="/account/register"><i
-								class="fa fa-unlock-alt"></i> Đăng ký</a></li>
-						<li class="hidden-lg hidden-md"><a href="/account/register"><i
-								class="fa fa-unlock-alt"></i> Đăng ký</a></li>
-						<li class="hidden-sm hidden-xs"><a href="/account/login"><i
-								class="fa fa-user"></i> Đăng nhập</a></li>
-						<li class="hidden-lg hidden-md"><a href="/account/login"><i
-								class="fa fa-user"></i> Đăng nhập</a></li>
-						<div id="social_login_widget"></div>
+				<c:if test="${ empty LoginInfo }">
+					<div class="inline-block account-dr hidden-sm">
+						<a class="icon-cricle" href=<c:url value="/info"/>><i class="fa fa-userss"></i></a>
+						<ul class="account-ct">
 
-					</ul>
+							<li class="hidden-sm hidden-xs"><a
+								href=<c:url value="/dang-ky"/>><i class="fa fa-unlock-alt"></i>
+									Đăng ký</a></li>
+							<li class="hidden-lg hidden-md"><a
+								href=<c:url value="/dang-ky"/>><i class="fa fa-unlock-alt"></i>
+									Đăng ký</a></li>
+							<li class="hidden-sm hidden-xs"><a
+								href=<c:url value="/dang-nhap"/>><i class="fa fa-user"></i>
+									Đăng nhập</a></li>
+							<li class="hidden-lg hidden-md"><a
+								href=<c:url value="/dang-nhap"/>><i class="fa fa-user"></i>
+									Đăng nhập</a></li>
+							<div id="social_login_widget"></div>
+
+						</ul>
+					</div>
+				</c:if>
+				<c:if test="${ not empty LoginInfo }">
+					<div class="inline-block account-dr hidden-sm">
+						<a class="icon-cricle" href=<c:url value="/info"/>><i class="fa fa-userss"></i></a>
+						<ul class="account-ct">
+
+							<li><a href=<c:url value="/info"/>><i class="fa fa-user"></i> ${ LoginInfo.lastname }
+							</a></li>
+
+							<li><a class="iWishView" href="javascript:;"
+								data-customer-id="12131686"><i class="fa  fa-heart"></i> Yêu
+									thích</a></li>
+
+							<li><a href=<c:url value="/dang-xuat"/>><i
+									class="fa  fa-sign-out"></i> Đăng xuất</a></li>
+
+						</ul>
+					</div>
+				</c:if>
+
+
+
+
+				<div class="inline-block mini-cart text-xs-center">
+					<div class="heading-cart">
+						<a href=<c:url value="/gio-hang"/> class="cart-label icon-cricle">
+							<i class="fa fa-shopping-baskets"></i> <span
+							class="cartCount count_item_pr" id="cart-total"></span>
+						</a>
+					</div>
+					<div class="top-cart-content hidden-md hidden-sm hidden-xs">
+						<ul id="cart-sidebar" class="mini-products-list count_li">
+							<li class="list-item">
+								<ul></ul>
+							</li>
+							<li class="action">
+								<ul>
+									<li class="li-fix-1">
+										<div class="inline-block account-dr">
+											<a class="icon-cricle" href=""><i
+												class="fa fa-shopping-cart" aria-hidden="true"></i> ${ TotalQuantyCart }
+											</a>
+										</div>
+										<div class="top-subtotal">
+											Tổng tiền thanh toán:
+											<p class="badge badge-warning">
+												<fmt:formatNumber type="number" groupingUsed="true"
+													value="${ TotalPriceCart }" />
+												₫
+											</p>
+										</div>
+									</li>
+									<li class="li-fix-2" style="">
+										<div class="actions">
+											<a href=<c:url value="/gio-hang"/> class="btn btn-primary">
+												<span>Giỏ hàng</span>
+
+											</a> <a href=<c:url value="/checkout"/> class="btn btn-checkout btn-gray"> <span>Thanh
+													toán</span>
+											</a>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</div>
+
+
 			</div>
 		</div>
 	</div>
@@ -194,7 +269,7 @@
 							<ul class="level0">
 
 								<c:forEach var="item" items="${ categories }">
-								
+
 									<li class="level1 parent item">
 										<p class="h4">
 											<a href=<c:url value='/category/${ item.id }'/>><span>${ item.name }</span></a>

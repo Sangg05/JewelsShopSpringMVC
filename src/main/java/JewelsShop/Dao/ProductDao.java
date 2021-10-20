@@ -25,4 +25,11 @@ public class ProductDao extends BaseDao {
 		return list;
 	}
 
+	public Product GetProductById(long id) {
+		Product product = new Product();
+		String sql = "select * from products where id = " + id;
+		product = _jdbcTemplate.queryForObject(sql, new MapperProduct());
+		return product;
+	}
+
 }

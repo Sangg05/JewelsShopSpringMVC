@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,12 +45,12 @@
 				<div class="page-login">
 					<div id="login">
 						<span>Nếu chưa có tài khoản vui lòng đăng ký tại đây</span>
-
-						<form accept-charset="utf-8" action="/account/register"
-							id="customer_register" method="post">
-							<input name="FormType" type="hidden" value="customer_register" />
-							<input name="utf8" type="hidden" value="true" /><input
-								type="hidden" id="Token-b0d535ae535c46129f11ed591d45a86f"
+						<form:form action="dang-ky" method="post" modelAttribute="user">
+							<%-- <form accept-charset="utf-8" action="/account/register"
+							id="customer_register" method="post" --%>
+							<!-- <input name="FormType" type="hidden" value="customer_register" />
+							<input name="utf8" type="hidden" value="true" />
+							<input type="hidden" id="Token-b0d535ae535c46129f11ed591d45a86f"
 								name="Token" />
 							<script
 								src="https://www.google.com/recaptcha/api.js?render=6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK"></script>
@@ -66,42 +69,47 @@
 																		.getElementById("Token-b0d535ae535c46129f11ed591d45a86f").value = token
 															});
 										});
-							</script>
+							</script> -->
+
 							<div class="form-signup"></div>
 							<div class="form-signup clearfix">
 								<div class="row">
 									<div class="col-md-6">
 										<fieldset class="form-group">
-											<label> Họ<span class="required">*</span></label> <input
-												type="text" class="form-control form-control-lg" value=""
-												name="lastName" id="lastName" placeholder="" required>
+											<label> Họ<span class="required">*</span></label>
+											<form:input type="text" class="form-control form-control-lg"
+												value="" name="lastName" id="lastname" placeholder=""
+												required="" path="lastname" />
 										</fieldset>
 									</div>
 									<div class="col-md-6">
 										<fieldset class="form-group">
-											<label>Tên <span class="required">*</span></label> <input
-												type="text" class="form-control form-control-lg" value=""
-												name="firstName" id="firstName" placeholder="" required>
+											<label>Tên <span class="required">*</span></label>
+											<form:input type="text" class="form-control form-control-lg"
+												value="" name="firstName" id="firstname" placeholder=""
+												required="" path="firstname" />
 										</fieldset>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-6">
 										<fieldset class="form-group">
-											<label>Email <span class="required">*</span></label> <input
-												type="email"
+											<label>Email <span class="required">*</span></label>
+											<form:input type="email"
 												pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"
 												class="form-control form-control-lg" value="" name="email"
-												id="email" placeholder="" required="">
+												id="email" placeholder="" required="" path="email" />
 										</fieldset>
 									</div>
 									<div class="col-md-6">
 
 										<fieldset class="form-group">
 											<label>Mật khẩu <span class="required">*</span>
-											</label> <input type="password" class="form-control form-control-lg"
-												value="" name="password" id="password" placeholder=""
-												required>
+											</label>
+											<form:input type="password"
+												class="form-control form-control-lg" value=""
+												name="password" id="password" placeholder="" required=""
+												path="password" />
 										</fieldset>
 									</div>
 								</div>
@@ -116,7 +124,7 @@
 										nhập</a>
 								</div>
 							</div>
-						</form>
+						</form:form>
 					</div>
 				</div>
 			</div>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -6,23 +7,23 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=5">
 <link rel="alternate" hreflang="vi" href="https://katjewelry.vn">
-<title>Đăng ký tài khoản</title>
+<title>Trang khách hàng</title>
 
 <!-- ================= Page description ================== -->
 
 <!-- ================= Meta ================== -->
 <meta name="keywords"
-	content="Đăng ký tài khoản, KaT Jewelry - Trang sức bạc 925 - Design & made to order, katjewelry.vn">
+	content="Trang khách hàng, KaT Jewelry - Trang sức bạc 925 - Design & made to order, katjewelry.vn">
 
 <link rel="canonical" href="https://katjewelry.vn" />
 
-<!-- <link rel="canonical" href="https://katjewelry.vn/account/register"> -->
+<!-- <link rel="canonical" href="https://katjewelry.vn/account"> -->
 <meta name='revisit-after' content='1 days'>
 <meta name="robots" content="noodp,index,follow">
 <!-- ================= Favicon ================== -->
 
 <link rel="icon"
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/favicon.png?1628876908532"
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/favicon.png?1634378863316"
 	type="image/x-icon">
 
 <!-- Facebook Open Graph meta tags -->
@@ -30,14 +31,14 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Đăng ký tài khoản">
+<meta property="og:title" content="Trang khách hàng">
 <meta property="og:image"
-	content="http://bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo.png?1628876908532">
+	content="http://bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo.png?1634378863316">
 <meta property="og:image:secure_url"
-	content="https://bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo.png?1628876908532">
+	content="https://bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo.png?1634378863316">
 
 <meta property="og:description" content="">
-<meta property="og:url" content="https://katjewelry.vn/account/register">
+<meta property="og:url" content="https://katjewelry.vn/account">
 <meta property="og:site_name"
 	content="KaT Jewelry - Trang sức bạc 925 - Design & made to order">
 
@@ -264,7 +265,7 @@
 	Bizweb.store = 'trung-katjewelry.mysapo.net';
 	Bizweb.id = 302551;
 	Bizweb.theme = { 'id': 758295, 'name': "KaT Jewelry - GPSI", 'role': 'main' };
-	Bizweb.template = 'customers/register';
+	Bizweb.template = 'customers/account';
 </script>
 <script>
 	(function () {
@@ -378,58 +379,58 @@ setTimeout(function(){
 </script>
 
 <link rel="preload" as="style" type="text/css"
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/bootstrap-min.css?1628876908532">
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/bootstrap-min.css?1634378863316">
 <link
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/bootstrap-min.css?1628876908532"
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/bootstrap-min.css?1634378863316"
 	rel="stylesheet" type="text/css" />
 
 <link rel="preload" as="style" type="text/css"
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/swiper-min.css?1628876908532">
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/swiper-min.css?1634378863316">
 <link
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/swiper-min.css?1628876908532"
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/swiper-min.css?1634378863316"
 	rel="stylesheet" type="text/css" />
 
 <!-- Build Main CSS -->
 <link rel="preload" as="style" type="text/css"
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/style.scss.css?1628876908532">
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/style.scss.css?1634378863316">
 <link
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/style.scss.css?1628876908532"
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/style.scss.css?1634378863316"
 	rel="stylesheet" type="text/css" />
 
 <link rel="preload" as="style" type="text/css"
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/owl.carousel.min.css?1628876908532">
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/owl.carousel.min.css?1634378863316">
 <link
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/owl.carousel.min.css?1628876908532"
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/owl.carousel.min.css?1634378863316"
 	rel="stylesheet" type="text/css" />
 
 <link rel="preload" as="style" type="text/css"
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/base.scss.css?1628876908532">
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/base.scss.css?1634378863316">
 <link
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/base.scss.css?1628876908532"
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/base.scss.css?1634378863316"
 	rel="stylesheet" type="text/css" />
 
 <link rel="preload" as="style" type="text/css"
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/update.scss.css?1628876908532">
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/update.scss.css?1634378863316">
 <link
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/update.scss.css?1628876908532"
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/update.scss.css?1634378863316"
 	rel="stylesheet" type="text/css" />
 
 <link rel="preload" as="style" type="text/css"
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/module.scss.css?1628876908532">
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/module.scss.css?1634378863316">
 <link
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/module.scss.css?1628876908532"
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/module.scss.css?1634378863316"
 	rel="stylesheet" type="text/css" />
 
 <link rel="preload" as="style" type="text/css"
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/responsive.scss.css?1628876908532">
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/responsive.scss.css?1634378863316">
 <link
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/responsive.scss.css?1628876908532"
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/responsive.scss.css?1634378863316"
 	rel="stylesheet" type="text/css" />
 
 <link rel="preload" as="style" type="text/css"
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/iwish.css?1628876908532">
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/iwish.css?1634378863316">
 <link
-	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/iwish.css?1628876908532"
+	href="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/iwish.css?1634378863316"
 	rel="stylesheet" type="text/css" />
 
 <!-- Header JS -->
@@ -443,11 +444,11 @@ e=n.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&
 
 
 <script>
-	  var iwish_template='customers/register';
-	  var iwish_cid=parseInt('0',10);	  
+	  var iwish_template='customers/account';
+	  var iwish_cid=parseInt('12131686',10);	  
 	</script>
 <script defer
-	src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/iwishheader.js?1628876908532"></script>
+	src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/iwishheader.js?1634378863316"></script>
 
 
 <!-- Google Tag Manager -->
@@ -539,7 +540,7 @@ e=n.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&
 			<div class="container relative">
 				<div class="menu-bar hidden-md hidden-lg">
 					<img
-						src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/menu-bar.png?1628876908532"
+						src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/menu-bar.png?1634378863316"
 						alt="menu bar" />
 				</div>
 				<div class="social-top hidden-sm hidden-xs">
@@ -570,7 +571,7 @@ e=n.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&
 					</ul>
 					<!--<div class="langs">
 					<a href="https://en-trung-katjewelry.bizwebvietnam.net">
-						<img src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/en.svg?1628876908532" alt="Vietnamese" />
+						<img src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/en.svg?1634378863316" alt="Vietnamese" />
 					</a>
 				</div>-->
 				</div>
@@ -581,8 +582,8 @@ e=n.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&
 							<div class="logo">
 
 								<a href="/" class="logo-wrapper "> <img
-									src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo.png?1628876908532"
-									data-lazyload="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo.png?1628876908532"
+									src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo.png?1634378863316"
+									data-lazyload="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo.png?1634378863316"
 									alt="logo ">
 								</a>
 
@@ -617,19 +618,22 @@ e=n.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&
 								class="fa fa-userss"></i></a>
 							<ul class="account-ct">
 
-								<li class="hidden-sm hidden-xs"><a href="/account/register"><i
-										class="fa fa-unlock-alt"></i> Đăng ký</a></li>
-								<li class="hidden-lg hidden-md"><a href="/account/register"><i
-										class="fa fa-unlock-alt"></i> Đăng ký</a></li>
-								<li class="hidden-sm hidden-xs"><a href="/account/login"><i
-										class="fa fa-user"></i> Đăng nhập</a></li>
-								<li class="hidden-lg hidden-md"><a href="/account/login"><i
-										class="fa fa-user"></i> Đăng nhập</a></li>
-								<div id="social_login_widget"></div>
+								<li><a href="/account"><i class="fa fa-user"></i> Luong
+										Sang</a></li>
+
+								<li><a class="iWishView" href="javascript:;"
+									data-customer-id="12131686"><i class="fa  fa-heart"></i>
+										Yêu thích</a></li>
+
+								<li><a href="/account/logout"><i
+										class="fa  fa-sign-out"></i> Đăng xuất</a></li>
 
 							</ul>
 						</div>
-						<!--<div class="inline-block mini-cart text-xs-center">
+						
+						
+						
+						<div class="inline-block mini-cart text-xs-center">
 						<div class="heading-cart">
 							<a href="/cart" class="cart-label icon-cricle">
 								<i class="fa fa-shopping-baskets"></i>
@@ -666,7 +670,7 @@ e=n.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&
 					</div>-->
 						<!--<div class="langs hidden-lg hidden-md">
 						<a href="https://en-trung-katjewelry.bizwebvietnam.net">
-							<img src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/en.svg?1628876908532" alt="Vietnamese" />
+							<img src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/en.svg?1634378863316" alt="Vietnamese" />
 						</a>
 					</div>-->
 					</div>
@@ -1371,14 +1375,16 @@ e=n.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&
 
 
 
-
 			<li class="nav-item"
 				style="margin-top: 10px; border-top: 1px solid #ebebeb; padding-top: 10px;"><a
-				href="/account/register"><i class="fa fa-unlock-alt"></i> Đăng
-					ký</a></li>
+				href="/account"><i class="fa fa-user"></i> Luong Sang</a></li>
 
-			<li class="nav-item"><a href="/account/login"><i
-					class="fa fa-user"></i> Đăng nhập</a></li>
+			<li class="nav-item"><a class="iWishView" href="javascript:;"
+				data-customer-id="12131686"><i class="fa  fa-heart"></i> Yêu
+					thích</a></li>
+
+			<li class="nav-item"><a href="/account/logout"><i
+					class="fa  fa-sign-out"></i> Đăng xuất</a></li>
 
 			<div id="social_login_widget"></div>
 		</ul>
@@ -1401,112 +1407,18 @@ e=n.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&
 						itemtype="http://schema.org/ListItem"><a itemprop="url"
 						itemprop="item" href="/"><span itemprop="name"><i
 								class="fa fa-home"></i> Trang chủ</span>
-							<meta itemprop="position" content="1" /></a> <span>/</span></li>
+						<meta itemprop="position" content="1" /></a> <span>/</span></li>
 
-					<li><strong itemprop="name">Đăng ký tài khoản</strong></li>
+					<li><strong itemprop="name">Trang khách hàng</strong></li>
 
 				</ul>
 			</div>
 		</div>
 	</div>
-	<div class="container margin-bottom-20">
-		<h1 class="title-head">
-			<a href="#">Đăng ký tài khoản</a>
-		</h1>
-		<div class="row">
-			<div class="col-lg-12 ">
-				<div class="page-login">
-					<div id="login">
-						<span>Nếu chưa có tài khoản vui lòng đăng ký tại đây</span>
-
-						<form accept-charset="utf-8" action="/account/register"
-							id="customer_register" method="post">
-							<input name="FormType" type="hidden" value="customer_register" />
-							<input name="utf8" type="hidden" value="true" /><input
-								type="hidden" id="Token-b0d535ae535c46129f11ed591d45a86f"
-								name="Token" />
-							<script
-								src="https://www.google.com/recaptcha/api.js?render=6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK"></script>
-							<script>
-grecaptcha.ready(function() {
-grecaptcha.execute("6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK", {action: "/account/register"})
-.then(function(token) {
-document.getElementById("Token-b0d535ae535c46129f11ed591d45a86f").value = token
-});
-});
-</script>
-							<div class="form-signup"></div>
-							<div class="form-signup clearfix">
-								<div class="row">
-									<div class="col-md-6">
-										<fieldset class="form-group">
-											<label> Họ<span class="required">*</span></label> <input
-												type="text" class="form-control form-control-lg" value=""
-												name="lastName" id="lastName" placeholder="" required>
-										</fieldset>
-									</div>
-									<div class="col-md-6">
-										<fieldset class="form-group">
-											<label>Tên <span class="required">*</span></label> <input
-												type="text" class="form-control form-control-lg" value=""
-												name="firstName" id="firstName" placeholder="" required>
-										</fieldset>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<fieldset class="form-group">
-											<label>Email <span class="required">*</span></label> <input
-												type="email"
-												pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"
-												class="form-control form-control-lg" value="" name="email"
-												id="email" placeholder="" required="">
-										</fieldset>
-									</div>
-									<div class="col-md-6">
-
-										<fieldset class="form-group">
-											<label>Mật khẩu <span class="required">*</span>
-											</label> <input type="password" class="form-control form-control-lg"
-												value="" name="password" id="password" placeholder=""
-												required>
-										</fieldset>
-									</div>
-								</div>
-
-								<div id="social_login_widget"></div>
-								<div class="col-xs-12 text-xs-left"
-									style="margin-top: 30px; padding: 0">
-									<button type="summit" value="Đăng ký"
-										class="btn  btn-style btn-primary">Đăng ký</button>
-									<a href="/account/login" class="btn-link-style btn-register"
-										style="margin-left: 20px; text-decoration: underline;">Đăng
-										nhập</a>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 
 	<script defer
-		src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/iwish.js?1628876908532"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/iwish.js?1634378863316"></script>
 
 	<footer class="footer">
 		<div class="site-footer">
@@ -1516,8 +1428,8 @@ document.getElementById("Token-b0d535ae535c46129f11ed591d45a86f").value = token
 						<div class="col-md-12">
 							<div class="foter-logo">
 								<a href="/" class="logo-wrapper"> <img
-									src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo-footer.png?1628876908532"
-									data-lazyload="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo-footer.png?1628876908532"
+									src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo-footer.png?1634378863316"
+									data-lazyload="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo-footer.png?1634378863316"
 									alt="logo " class="img-responsive center-block" />
 								</a>
 							</div>
@@ -1576,8 +1488,8 @@ document.getElementById("Token-b0d535ae535c46129f11ed591d45a86f").value = token
 								<div class="bct">
 									<a href="http://online.gov.vn/Home/WebDetails/33855"
 										target="_blank" rel="noopener"> <img
-										src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/bct.png?1628876908532"
-										data-lazyload="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/bct.png?1628876908532"
+										src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/bct.png?1634378863316"
+										data-lazyload="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/bct.png?1634378863316"
 										class="img-responsive" alt="Bộ Công Thương" />
 									</a>
 								</div>
@@ -1705,8 +1617,8 @@ document.getElementById("Token-b0d535ae535c46129f11ed591d45a86f").value = token
 									<a
 										href="http://online.gov.vn/HomePage/PersonalWebsiteDisplay.aspx?DocId=33863 target="
 										_blank" rel="noopener" " target="_blank"> <img
-										src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/bct.png?1628876908532"
-										data-lazyload="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/bct.png?1628876908532"
+										src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/bct.png?1634378863316"
+										data-lazyload="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/bct.png?1634378863316"
 										class="img-responsive" alt="Bộ Công Thương" />
 									</a>
 								</div>
@@ -1753,7 +1665,7 @@ document.getElementById("Token-b0d535ae535c46129f11ed591d45a86f").value = token
 
 
 	<script
-		src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/option-selectors.js?1628876908532"></script>
+		src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/option-selectors.js?1634378863316"></script>
 	<script src="//bizweb.dktcdn.net/assets/themes_support/api.jquery.js"></script>
 
 	<!-- Plugin JS -->
@@ -1764,11 +1676,11 @@ document.getElementById("Token-b0d535ae535c46129f11ed591d45a86f").value = token
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<script
-		src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/cs.script.js?1628876908532"></script>
+		src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/cs.script.js?1634378863316"></script>
 
 
 	<script
-		src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/quickview.js?1628876908532"></script>
+		src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/quickview.js?1634378863316"></script>
 
 
 	<div id="quick-view-product" class="quickview-product"
@@ -1782,7 +1694,7 @@ document.getElementById("Token-b0d535ae535c46129f11ed591d45a86f").value = token
 						<span class="view_full_size"> <a class="img-product"
 							title="" href="#"> <img id="product-featured-image-quickview"
 								class="img-responsive product-featured-image-quickview"
-								src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo.png?1628876908532"
+								src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/logo.png?1634378863316"
 								alt="quickview" />
 						</a>
 						</span>
@@ -1998,9 +1910,9 @@ document.getElementById("Token-b0d535ae535c46129f11ed591d45a86f").value = token
 		</script>
 
 	<script
-		src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/main.js?1628876908532"></script>
+		src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/main.js?1634378863316"></script>
 	<script
-		src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/owl.carousel.min.js?1628876908532"></script>
+		src="//bizweb.dktcdn.net/100/302/551/themes/758295/assets/owl.carousel.min.js?1634378863316"></script>
 
 
 	<!-- Product detail JS,CSS -->
@@ -2040,7 +1952,7 @@ document.getElementById("Token-b0d535ae535c46129f11ed591d45a86f").value = token
 
 
 	<input type="hidden" name="_pc_params"
-		value="trung-katjewelry.mysapo.net:::">
+		value="trung-katjewelry.mysapo.net:12131686:luongsang010@gmail.com:Luong Sang">
 
 	<script>
 			setTimeout(function(){
@@ -2061,9 +1973,9 @@ document.getElementById("Token-b0d535ae535c46129f11ed591d45a86f").value = token
 @font-face {
 	font-family: 'FontAwesome';
 	src:
-		url(//bizweb.dktcdn.net/100/302/551/themes/758295/assets/fontawesome-webfont.eot?1628876908532);
+		url(//bizweb.dktcdn.net/100/302/551/themes/758295/assets/fontawesome-webfont.eot?1634378863316);
 	src:
-		url(//bizweb.dktcdn.net/100/302/551/themes/758295/assets/fontawesome-webfont.ttf?1628876908532)
+		url(//bizweb.dktcdn.net/100/302/551/themes/758295/assets/fontawesome-webfont.ttf?1634378863316)
 		format('truetype');
 	font-weight: normal;
 	font-style: normal
@@ -2183,50 +2095,9 @@ document.getElementById("Token-b0d535ae535c46129f11ed591d45a86f").value = token
 
 100%{
 -webkit-transform
-
-
-
-
-
-
-
-
-
-
 :rotate(359deg)
-
-
-
-
-
-
-
-
-
-
-;
-transform
-
-
-
-
-
-
-
-
-
-
+;transform
 :rotate(359deg)
-
-
-
-
-
-
-
-
-
-
 }
 }
 @
@@ -2237,50 +2108,9 @@ keyframes fa-spin { 0%{
 
 100%{
 -webkit-transform
-
-
-
-
-
-
-
-
-
-
 :rotate(359deg)
-
-
-
-
-
-
-
-
-
-
-;
-transform
-
-
-
-
-
-
-
-
-
-
+;transform
 :rotate(359deg)
-
-
-
-
-
-
-
-
-
-
 }
 }
 .fa-rotate-90 {

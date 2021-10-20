@@ -16,21 +16,4 @@ public class HomeController extends BaseController {
 		return mvShare;
 	}
 
-	@RequestMapping(value = "/product")
-	public ModelAndView Product() {
-		ModelAndView mv = new ModelAndView("user/products/product");
-		return mv;
-	}
-
-	@RequestMapping(value = "/login")
-	public ModelAndView Login() {
-		ModelAndView mv = new ModelAndView("user/account/login");
-		return mv;
-	}
-
-	@RequestMapping(value = "/register")
-	public ModelAndView Regiater() {
-		ModelAndView mv = new ModelAndView("user/account/register");
-		return mv;
-	}
 }
