@@ -32,4 +32,11 @@ public class ProductDao extends BaseDao {
 		return product;
 	}
 
+	public List<Product> getProductsByName(String key) {
+		List<Product> list = new ArrayList<Product>();
+		String sql = "select * from products where name LIKE '%" + key + "%'";
+		list = _jdbcTemplate.query(sql, new MapperProduct());
+		return list;
+	}
+
 }

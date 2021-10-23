@@ -1,5 +1,7 @@
 package JewelsShop.Dao;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import JewelsShop.Entity.MapperUser;
@@ -30,9 +32,13 @@ public class UserDao extends BaseDao {
 	}
 
 	public User GetUserByAccount(User user) {
-
 		String sql = "SELECT * FROM user WHERE email = '" + user.getEmail() + "'";
-		User result = _jdbcTemplate.queryForObject(sql, new MapperUser());
-		return result;
+		List<User> result = _jdbcTemplate.query(sql, new MapperUser());
+		
+		if (result.isEmpty()) {
+	        return null;
+	    } else {
+	        return result.get(0);
+	    }
 	}
 }

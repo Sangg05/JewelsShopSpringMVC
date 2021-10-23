@@ -1,10 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Trang khách hàng</title>
 </head>
 <body>
 	<div class="fixbg-breadcrumb">
@@ -62,9 +66,8 @@
 												<table class="table table-cart" id="my-orders-table">
 													<thead class="thead-default">
 														<tr>
-															<th>Đơn hàng</th>
-															<th>Ngày</th>
-
+															<th>Mã đơn hàng</th>
+															<th>Email</th>
 															<th>Địa chỉ</th>
 															<th>Giá trị đơn hàng</th>
 															<th>Tình trạng thanh toán</th>
@@ -73,11 +76,60 @@
 													</thead>
 
 													<tbody>
+														<c:if test="${ empty LoginInfo }">
+															<tr>
+																<td colspan="6"><p>Không có đơn hàng nào.</p></td>
+															</tr>
+														</c:if>
+														<c:if test="${ not empty LoginInfo }">
+															<tr>
+																<th>${ bill.id }</th>
+																<th>${ bill.email }</th>
+																<th>${ bill.address }</th>
+																<th><fmt:formatNumber type="number"
+																		groupingUsed="true" value="${ bill.total }" /> vnđ</th>
+																<th>Chưa thanh toán</th>
+																<th>Xác nhận</th>
+															</tr>
 
-														<tr>
-															<td colspan="6"><p>Không có đơn hàng nào.</p></td>
-														</tr>
+															<table class="table table-bordered table-condensed">
+																<thead>
+																	<tr>
+																		<th>Hình ảnh</th>
+																		<th>Mô tả</th>
+																		<th>Giá bán</th>
+																		<th>Giá tiền</th>
+																		<th>Tổng tiền</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<c:forEach var="item" items="${ products }" varStatus="loop">
 
+																		<tr>
+
+																			<td><img width="200"
+																				src="<c:url value="/assets/user/images/product/${ item.image }"/>"
+																				alt=""></td>
+																			<td>${ item.name }</td>
+
+																			<td><fmt:formatNumber type="number"
+																					groupingUsed="true"
+																					value="${ item.price }" /> ₫</td>
+																					
+																			 <td>${ billDetails[loop.index].quanty }</td>
+																			
+																			
+																			<td><fmt:formatNumber type="number"
+																					groupingUsed="true"
+																					value="${ billDetails[loop.index].total }" /> ₫</td>
+																		</tr>
+																	</c:forEach>
+
+																</tbody>
+															</table>
+
+
+														</c:if>
 													</tbody>
 
 

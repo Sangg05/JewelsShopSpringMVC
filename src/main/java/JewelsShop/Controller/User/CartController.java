@@ -28,10 +28,6 @@ public class CartController extends BaseController {
 
 	@RequestMapping(value = "gio-hang")
 	public ModelAndView Index() {
-//		mvShare.addObject("slides", homeService.GetDataSlide());
-//		mvShare.addObject("categories", homeService.GetDataCategories());
-//		mvShare.addObject("new_products", homeService.GetDataNewProducts());
-//		mvShare.addObject("highlight_products", homeService.GetDataHighlightProducts());
 		mvShare.setViewName("user/cart/list_cart");
 		return mvShare;
 	}
@@ -78,15 +74,24 @@ public class CartController extends BaseController {
 
 	@RequestMapping(value = "checkout", method = RequestMethod.GET)
 	public ModelAndView CheckOut(HttpServletRequest request, HttpSession session) {
-		mvShare.setViewName("user/bill/checkout");
+
 		Bill bill = new Bill();
 		User loginInfo = (User) session.getAttribute("LoginInfo");
 		if (loginInfo != null) {
 			bill.setAddress(loginInfo.getAddress());
 			bill.setDisplay_name(loginInfo.getLastname());
 			bill.setEmail(loginInfo.getEmail());
+			if (Integer.parseInt(session.getAttribute("TotalQuantyCart").toString()) == 0) {
+				mvShare.setViewName("redirect:gio-hang");
+
+			} else {
+				mvShare.setViewName("user/bill/checkout");
+				mvShare.addObject("bill", bill);
+			}
+		} else {
+			mvShare.setViewName("redirect:dang-nhap");
 		}
-		mvShare.addObject("bill", bill);
+
 		return mvShare;
 	}
 

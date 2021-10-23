@@ -1,6 +1,7 @@
 package JewelsShop.Service.User;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,10 @@ public class BillServiceImpl implements IBill {
 		return billDao.AddBill(bill);
 	}
 
+	public Bill GetBill(String email) {
+		return billDao.GetBill(email);
+	}
+
 	public void AddBillDetail(HashMap<Long, CartDto> carts) {
 		long idBill = billDao.getIDLastBill();
 
@@ -33,6 +38,10 @@ public class BillServiceImpl implements IBill {
 			billDao.AddBillDetail(billDetail);
 		}
 
+	}
+
+	public List<BillDetail> GetBillDetails(long id_bill) {
+		return billDao.GetBillDetails(id_bill);
 	}
 
 }

@@ -13,8 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 public class CategoryController extends BaseController {
 	@RequestMapping(value = "/category/{id}")
 	public ModelAndView Category(HttpServletRequest request, @PathVariable String id) {
-		
-
         mvShare.addObject("cate", homeService.getProductsByPage(Integer.parseInt(id)));
         
         PagedListHolder pagedListHolder = new PagedListHolder(homeService.getProductsByPage(Integer.parseInt(id)));

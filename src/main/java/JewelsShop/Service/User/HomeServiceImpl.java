@@ -37,4 +37,9 @@ public class HomeServiceImpl implements IHome {
 		return productDao.getProductsByPage(id);
 	}
 
+	public List<Product> getProductsByName(String key) {
+		
+		return productDao.getProductsByName(key);
+	}
+
 }

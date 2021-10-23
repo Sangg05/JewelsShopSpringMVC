@@ -1,9 +1,17 @@
 package JewelsShop.Dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import JewelsShop.Entity.Bill;
 import JewelsShop.Entity.BillDetail;
+import JewelsShop.Entity.Category;
+import JewelsShop.Entity.MapperBill;
+import JewelsShop.Entity.MapperBillDetail;
+import JewelsShop.Entity.MapperCategory;
+import JewelsShop.Entity.MapperUser;
 
 @Repository
 public class BillDao extends BaseDao {
@@ -56,5 +64,23 @@ public class BillDao extends BaseDao {
 		sql.append(")");
 		int insert = _jdbcTemplate.update(sql.toString());
 		return insert;
+	}
+
+	public Bill GetBill(String email) {
+		String sql = "SELECT * FROM bill WHERE email = '" + email.trim() + "'";
+		List<Bill> bill = _jdbcTemplate.query(sql, new MapperBill());
+		if (bill.isEmpty()) {
+	        return null;
+	    } else {
+	        return bill.get(0);
+	    }
+	}
+
+	public List<BillDetail> GetBillDetails(long id_bill) {
+		String sql = "SELECT * FROM billdetail WHERE id_bill = " + id_bill;
+		List<BillDetail> list = new ArrayList<BillDetail>();
+		
+		list = _jdbcTemplate.query(sql, new MapperBillDetail());
+		return list;
 	}
 }

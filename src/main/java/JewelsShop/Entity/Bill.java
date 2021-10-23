@@ -4,7 +4,6 @@ public class Bill {
 	private long id;
 	private String email;
 	private String phone;
-
 	private String display_name;
 	private String address;
 	private double total;

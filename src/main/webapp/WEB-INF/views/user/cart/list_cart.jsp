@@ -82,7 +82,8 @@
 
 						</tbody>
 					</table>
-					<br /> <a href="products.html" class="shopBtn btn-large"><span
+					<h1>${ message }</h1>
+					<br /> <a href=<c:url value="/trang-chu"/> class="shopBtn btn-large"><span
 						class="icon-arrow-left"></span> Tiếp tục mua sắm </a> <a
 						href="checkout" class="shopBtn btn-large pull-right">Thanh
 						toán <span class="icon-arrow-right"></span>

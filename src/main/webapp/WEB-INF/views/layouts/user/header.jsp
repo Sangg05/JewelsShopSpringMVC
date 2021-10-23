@@ -138,12 +138,12 @@
 						<li>
 							<div class="header_search search_form">
 								<form class="input-group search-bar search_form"
-									action="/search" method="get" role="search">
+									action=<c:url value="/search"/> method="get" role="search">
 									<input type="search" name="query" value=""
 										placeholder="Từ khóa tìm kiếm... "
 										class="input-group-field st-default-search-input search-text"
 										autocomplete="off"> <span class="input-group-btn">
-										<button class="btn icon-fallback-text">
+										<button  class="btn icon-fallback-text">
 											<i class="fa fa-search"></i>
 										</button>
 									</span>
@@ -184,7 +184,7 @@
 							<li><a href=<c:url value="/info"/>><i class="fa fa-user"></i> ${ LoginInfo.lastname }
 							</a></li>
 
-							<li><a class="iWishView" href="javascript:;"
+							<li><a class="iWishView" href="<c:url value='/trang-chu'/>"
 								data-customer-id="12131686"><i class="fa  fa-heart"></i> Yêu
 									thích</a></li>
 
@@ -253,7 +253,7 @@
 	<div class="container">
 		<ul id="nav" class="nav hidden-xs hidden-sm">
 
-			<li class="nav-item active"><a class="nav-link" href="/">Trang
+			<li class="nav-item active"><a class="nav-link" href="<c:url value='/trang-chu'/>">Trang
 					chủ</a></li>
 
 
@@ -294,7 +294,7 @@
 
 
 
-			<li class="nav-item "><a class="nav-link" href="/instagram">Instagram</a></li>
+			<li class="nav-item "><a class="nav-link" href="<c:url value='/trang-chu'/>">Instagram</a></li>
 
 
 
@@ -303,7 +303,7 @@
 
 
 
-			<li class="nav-item "><a href="/bo-suu-tap" class="nav-link">Bộ
+			<li class="nav-item "><a href="<c:url value='/trang-chu'/>" class="nav-link">Bộ
 					sưu tập <i class="fa fa-angle-down" data-toggle="dropdown"></i>
 			</a>
 
@@ -444,7 +444,7 @@
 
 
 
-			<li class="nav-item "><a class="nav-link" href="/lien-he-c61">Liên
+			<li class="nav-item "><a class="nav-link" href="<c:url value='/trang-chu'/>">Liên
 					hệ</a></li>
 
 

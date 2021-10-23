@@ -22,4 +22,7 @@ public interface IHome {
 
 	@Autowired
 	public List<Product> getProductsByPage(int id);
+
+	@Autowired
+	public List<Product> getProductsByName(String key);
 }

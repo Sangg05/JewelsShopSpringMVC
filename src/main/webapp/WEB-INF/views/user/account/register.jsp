@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Insert title here</title>
+<title>Đăng ký tài khoản</title>
 </head>
 <body>
 	<div class="fixbg-breadcrumb">
@@ -45,32 +45,8 @@
 				<div class="page-login">
 					<div id="login">
 						<span>Nếu chưa có tài khoản vui lòng đăng ký tại đây</span>
+						
 						<form:form action="dang-ky" method="post" modelAttribute="user">
-							<%-- <form accept-charset="utf-8" action="/account/register"
-							id="customer_register" method="post" --%>
-							<!-- <input name="FormType" type="hidden" value="customer_register" />
-							<input name="utf8" type="hidden" value="true" />
-							<input type="hidden" id="Token-b0d535ae535c46129f11ed591d45a86f"
-								name="Token" />
-							<script
-								src="https://www.google.com/recaptcha/api.js?render=6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK"></script>
-							<script>
-								grecaptcha
-										.ready(function() {
-											grecaptcha
-													.execute(
-															"6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK",
-															{
-																action : "/account/register"
-															})
-													.then(
-															function(token) {
-																document
-																		.getElementById("Token-b0d535ae535c46129f11ed591d45a86f").value = token
-															});
-										});
-							</script> -->
-
 							<div class="form-signup"></div>
 							<div class="form-signup clearfix">
 								<div class="row">
@@ -113,13 +89,13 @@
 										</fieldset>
 									</div>
 								</div>
-
+								<p style="color:red;">${ status }</p>
 								<div id="social_login_widget"></div>
 								<div class="col-xs-12 text-xs-left"
 									style="margin-top: 30px; padding: 0">
 									<button type="summit" value="Đăng ký"
 										class="btn  btn-style btn-primary">Đăng ký</button>
-									<a href="/account/login" class="btn-link-style btn-register"
+									<a href="<c:url value='/dang-nhap'/>" class="btn-link-style btn-register"
 										style="margin-left: 20px; text-decoration: underline;">Đăng
 										nhập</a>
 								</div>

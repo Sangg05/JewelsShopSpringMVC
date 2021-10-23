@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Insert title here</title>
+<title>Đăng nhập tài khoản</title>
 </head>
 <body>
 	<div class="fixbg-breadcrumb">
@@ -71,7 +71,7 @@
 
 								<div class="pull-xs-left" style="margin-top: 25px;">
 									<input class="btn btn-style btn-primary" type="submit"
-										value="Đăng nhập" /> <a href="<c:url value='register'/>"
+										value="Đăng nhập" /> <a href="<c:url value='/dang-ky'/>"
 										class="btn-link-style btn-register"
 										style="margin-left: 20px; text-decoration: underline;">Đăng
 										ký</a>

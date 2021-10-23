@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//src/main/java/JewelsShop/Controller/User/CartController.java=UTF-8
+encoding//src/main/java/JewelsShop/Controller/User/SearchController.java=UTF-8
 encoding//src/main/java/JewelsShop/Controller/User/UserController.java=UTF-8
 encoding//src/main/webapp/WEB-INF/views/user/NewFile.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/user/products/category.jsp=UTF-8
