@@ -11,6 +11,9 @@
 <title>Trang khách hàng</title>
 </head>
 <body>
+	<h1>${ bills.size() }bills</h1>
+	<h1>${ billDetailsBill.size() }billDetails</h1>
+	<h1>${ products.size() }products</h1>
 	<div class="fixbg-breadcrumb">
 		<section class="bread-crumb"
 			style="background-image: url(//bizweb.dktcdn.net/100/302/551/themes/758295/assets/breadcrump.jpg?1628876908532);">
@@ -63,7 +66,101 @@
 										<div class="recent-orders">
 											<div class="table-responsive tab-all"
 												style="overflow-x: auto;">
-												<table class="table table-cart" id="my-orders-table">
+
+												<c:forEach var="item" items="${ bills }"
+													varStatus="loopBill">
+
+													<table class="table table-cart" id="my-orders-table">
+														<thead class="thead-default">
+															<tr>
+																<th>STT</th>
+																<th>Mã đơn hàng</th>
+																<th>Email</th>
+																<th>Địa chỉ</th>
+																<th>Giá trị đơn hàng</th>
+																<th>Tình trạng thanh toán</th>
+																<th>Trạng thái</th>
+															</tr>
+														</thead>
+
+														<tbody>
+															<c:if test="${ empty LoginInfo }">
+																<tr>
+																	<td colspan="6"><p>Không có đơn hàng nào.</p></td>
+																</tr>
+															</c:if>
+															<c:if test="${ not empty LoginInfo }">
+																<tr>
+																	<th>${ loopBill.index + 1 }</th>
+																	<th>${ item.id }</th>
+																	<th>${ item.email }</th>
+																	<th>${ item.address }</th>
+																	<th><fmt:formatNumber type="number"
+																			groupingUsed="true" value="${ item.total }" /> vnđ</th>
+																	<th>Chưa thanh toán</th>
+																	<th>Xác nhận</th>
+																</tr>
+
+																<table class="table table-bordered table-condensed">
+																	<thead>
+																		<tr>
+																			<th>Hình ảnh</th>
+																			<th>Mô tả</th>
+																			<th>Giá bán</th>
+																			<th>Số lượng</th>
+																			<th>Tổng tiền</th>
+																		</tr>
+																	</thead>
+																	<c:forEach var="itemBillDetail"
+																		items="${ billDetailsBill }"
+																		varStatus="loopBillDetail">
+
+																		<c:if test="${item.id == itemBillDetail.id_bill}">
+																			<c:forEach var="itemPro" items="${ products }"
+																				varStatus="loopPro">
+																				<c:if
+																					test="${ itemPro.id == itemBillDetail.id_product}">
+																					<tr>
+																						<td><img width="80" height="100"
+																							src="<c:url value="/assets/user/images/product/${ itemPro.image }"/>"
+																							alt=""></td>
+																						<td>${ itemPro.name }</td>
+
+																						<td><fmt:formatNumber type="number"
+																								groupingUsed="true" value="${ itemPro.price }" />
+																							₫</td>
+
+																						<td>${ itemBillDetail.quanty }</td>
+
+
+																						<td><fmt:formatNumber type="number"
+																								groupingUsed="true"
+																								value="${ itemBillDetail.total }" /> ₫</td>
+																					</tr>
+																				</c:if>
+																				</tbody>
+																			</c:forEach>
+																		</c:if>
+
+
+
+																	</c:forEach>
+
+																</table>
+
+
+															</c:if>
+
+														</tbody>
+
+
+													</table>
+
+													<hr>
+
+												</c:forEach>
+
+												<%-- <table class="table table-cart" id="my-orders-table">
 													<thead class="thead-default">
 														<tr>
 															<th>Mã đơn hàng</th>
@@ -81,7 +178,7 @@
 																<td colspan="6"><p>Không có đơn hàng nào.</p></td>
 															</tr>
 														</c:if>
-														<c:if test="${ not empty LoginInfo }">
+														 <c:if test="${ not empty LoginInfo }">
 															<tr>
 																<th>${ bill.id }</th>
 																<th>${ bill.email }</th>
@@ -129,11 +226,18 @@
 															</table>
 
 
-														</c:if>
+														</c:if> 
+														
 													</tbody>
 
 
-												</table>
+												</table> --%>
+
+
+
+
+
+
 
 											</div>
 

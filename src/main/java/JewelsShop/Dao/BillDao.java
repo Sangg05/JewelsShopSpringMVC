@@ -66,13 +66,13 @@ public class BillDao extends BaseDao {
 		return insert;
 	}
 
-	public Bill GetBill(String email) {
+	public List<Bill> GetBill(String email) {
 		String sql = "SELECT * FROM bill WHERE email = '" + email.trim() + "'";
-		List<Bill> bill = _jdbcTemplate.query(sql, new MapperBill());
-		if (bill.isEmpty()) {
+		List<Bill> bills = _jdbcTemplate.query(sql, new MapperBill());
+		if (bills.isEmpty()) {
 	        return null;
 	    } else {
-	        return bill.get(0);
+	        return bills;
 	    }
 	}
 
@@ -83,4 +83,7 @@ public class BillDao extends BaseDao {
 		list = _jdbcTemplate.query(sql, new MapperBillDetail());
 		return list;
 	}
+	
 }
+
+

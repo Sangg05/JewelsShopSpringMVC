@@ -21,7 +21,7 @@ public class UserDao extends BaseDao {
 		sql.append("VALUES ( ");
 		sql.append("    '" + user.getFirstname() + "', ");
 		sql.append("    '" + user.getLastname() + "', ");
-		sql.append("    '" + user.getEmail() + "', ");
+		sql.append("    '" + user.getEmail().toLowerCase() + "', ");
 		sql.append("    '" + user.getPassword() + "', ");
 		sql.append("    '" + user.getAddress() + "' ");
 		sql.append(")");
@@ -32,7 +32,7 @@ public class UserDao extends BaseDao {
 	}
 
 	public User GetUserByAccount(User user) {
-		String sql = "SELECT * FROM user WHERE email = '" + user.getEmail() + "'";
+		String sql = "SELECT * FROM user WHERE email = '" + user.getEmail().toLowerCase() + "'";
 		List<User> result = _jdbcTemplate.query(sql, new MapperUser());
 		
 		if (result.isEmpty()) {

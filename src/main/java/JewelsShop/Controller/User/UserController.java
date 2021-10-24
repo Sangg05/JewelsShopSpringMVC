@@ -41,21 +41,24 @@ public class UserController extends BaseController {
 	@RequestMapping(value = "/info")
 	public ModelAndView Info(HttpSession session) {
 
-		Bill bill = new Bill();
-		List<BillDetail> billDetails = new ArrayList<BillDetail>();
+		List<Bill> bills = new ArrayList<Bill>();
+		List<BillDetail> billDetailsBill = new ArrayList<BillDetail>();
 		List<Product> products = new ArrayList<Product>();
 		User loginInfo = (User) session.getAttribute("LoginInfo");
 		if (loginInfo != null) {
-			bill = billService.GetBill(loginInfo.getEmail());
-			if (bill != null) {
-				billDetails = billService.GetBillDetails(bill.getId());
-				for (BillDetail billDetail : billDetails) {
-					Product product = productService.GetProductById(billDetail.getId_product());
-					products.add(product);
+			bills = billService.GetBill(loginInfo.getEmail());
+			if (bills != null) {
+				for (Bill bill : bills) {
+					List<BillDetail> billDetails = billService.GetBillDetails(bill.getId());
+					for (BillDetail billDetail : billDetails) {
+						Product product = productService.GetProductById(billDetail.getId_product());
+						products.add(product);
+					}
+					billDetailsBill.addAll(billDetails);
 				}
 			}
-			mvShare.addObject("bill", bill);
-			mvShare.addObject("billDetails", billDetails);
+			mvShare.addObject("bills", bills);
+			mvShare.addObject("billDetailsBill", billDetailsBill);
 			mvShare.addObject("products", products);
 		} else {
 			mvShare.setViewName("redirect:dang-nhap");
@@ -82,7 +85,7 @@ public class UserController extends BaseController {
 			int count = accountService.AddAccount(user);
 
 			if (count > 0) {
-				mvShare.setViewName("redirect:trang-chu");
+				mvShare.setViewName("redirect:dang-nhap");
 			} else if (count == -1) {
 
 				mvShare.setViewName("user/account/register");

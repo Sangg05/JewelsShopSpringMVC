@@ -21,7 +21,7 @@ public class BillServiceImpl implements IBill {
 		return billDao.AddBill(bill);
 	}
 
-	public Bill GetBill(String email) {
+	public List<Bill> GetBill(String email) {
 		return billDao.GetBill(email);
 	}
 
@@ -43,5 +43,6 @@ public class BillServiceImpl implements IBill {
 	public List<BillDetail> GetBillDetails(long id_bill) {
 		return billDao.GetBillDetails(id_bill);
 	}
+	
 
 }
