@@ -8,17 +8,12 @@
 </head>
 <body>
 
-	<div class="page-container">
 
-		<div class="left-content">
 
-			<div class="mother-grid-inner">
 
-				<jsp:include page="header.jsp"></jsp:include>
 
 				<div class="inner-block">
 					<div class="inbox">
-					
 						<h2>Quản lí người dùng</h2>
 						<div class="col-md-12 mailbox-content  tab-content tab-content-in">
 							<div class="tab-pane active text-style" id="tab1">
@@ -82,16 +77,6 @@
 						<div class="clearfix"></div>
 					</div>
 				</div>
-
-				<jsp:include page="footer.jsp"></jsp:include>
-
-			</div>
-
-		</div>
-
-		<jsp:include page="navigation.jsp"></jsp:include>
-
-	</div>
 
 </body>
 </html>

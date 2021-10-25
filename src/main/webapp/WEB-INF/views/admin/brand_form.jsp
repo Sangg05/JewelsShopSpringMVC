@@ -20,7 +20,6 @@
 
 			<div class="mother-grid-inner">
 
-
 				<div class="inner-block">
 					<div class="inbox">
 						<h2>Thêm thương hiệu</h2>
@@ -29,14 +28,14 @@
 								<div class="inbox-details-heading">Form thêm thương hiệu</div>
 								<div class="inbox-details-body">
 									<div class="alert alert-info">${message}</div>
-									<form:form class="com-mail" modelAttribute="brand">
+									<form class="com-mail" >
 										<label>Name</label>
-										<form:input type="text" placeholder="name..." path="name" />
+										<input type="text" placeholder="name..." path="name" >
 										<div>
-											<form:errors path="name" />
+											<errors path="name" />
 										</div>
 										<button type="submit">Save</button>
-									</form:form>
+									</form>
 								</div>
 							</div>
 						</div>

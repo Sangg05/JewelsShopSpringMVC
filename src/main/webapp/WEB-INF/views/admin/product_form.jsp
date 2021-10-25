@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>product form</title>
 <style type="text/css">
-*[id$=errors]{
-	color:red;
+*[id$=errors] {
+	color: red;
 	font-style: italic;
 }
 </style>
@@ -20,7 +20,7 @@
 
 			<div class="mother-grid-inner">
 
-				<jsp:include page="header.jsp"></jsp:include>
+				
 
 				<div class="inner-block">
 					<div class="inbox">
@@ -30,7 +30,62 @@
 								<div class="inbox-details-heading">Compose New Message</div>
 								<div class="inbox-details-body">
 									<div class="alert alert-info">${message }</div>
-									<form:form action="admin/product/insert.htm" class="com-mail" modelAttribute="product" methods="POST">
+									<form action="admin/product/insert.htm" class="com-mail"
+										 methods="POST">
+
+										<label>Tên sản phẩm</label>
+										<input type="text" placeholder="ABC" path="name" />
+										<div>
+											<errors path="name" />
+										</div>
+										<label>Giá</label>
+										<input type="number" placeholder="123,000 VNĐ"
+											path="price" />
+										<errors path="price" />
+										<label>Số lượng</label>
+										<input type="number" placeholder="200" path="quantity" />
+										<errors path="quantity" />
+										<label>Năm sản xuất</label>
+										<input type="number" placeholder="2010" path="year" />
+										<errors path="year" />
+										<br>
+										<label>Nguồn gốc</label>
+										<input type="text" placeholder="..." path="madein" />
+										<div>
+											<errors path="madein" />
+										</div>
+										<label>Hình ảnh</label>
+										<input type="text" placeholder="" path="url" />
+										<div>
+											<errors path="url" />
+										</div>
+										<label>Description</label>
+										<textarea rows="6" placeholder="description..."
+											path="description" />
+										<div>
+											<errors path="description" />
+										</div>
+										<label>Giới tính</label>
+										<!-- Combobox -->
+										<select path="sex.id" items="${sexs}" itemValue="id"
+											itemLabel="name" />
+										<label>Loại sản phẩm</label>
+										<!-- Combobox -->
+										<select path="brand.id" items="${brands}" itemValue="id"
+											itemLabel="name" />
+
+										<label>Show room</label>
+										<!-- Combobox -->
+										<select path="supplier.id" items="${showroom}"
+											itemValue="id" itemLabel="name" />
+										<label>Tình trạng</label>
+										<!-- Combobox -->
+										<select path="productstatus.id" items="${productStatus}"
+											itemValue="id" itemLabel="name" />
+										<br>
+										<button type="submit">Save</button>
+									</form>
+									<%-- <form:form action="admin/product/insert.htm" class="com-mail" modelAttribute="product" methods="POST">
 										
 										<label>Tên sản phẩm</label> 
 										<form:input type="text" placeholder="ABC" path="name"/>
@@ -69,7 +124,7 @@
 										<form:select path="productstatus.id" items="${productStatus}" itemValue="id" itemLabel="name" />
 										<br>
 										<button type="submit">Save</button>
-									</form:form>
+									</form:form> --%>
 								</div>
 							</div>
 						</div>

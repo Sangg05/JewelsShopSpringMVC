@@ -1,5 +1,7 @@
 package JewelsShop.Entity;
 
+import java.sql.Date;
+
 public class Bill {
 	private long id;
 	private String email;
@@ -8,7 +10,8 @@ public class Bill {
 	private String address;
 	private double total;
 	private int quanty;
-	private String note;
+	private Date date;
+	private String status;
 
 	public Bill() {
 		super();
@@ -70,12 +73,20 @@ public class Bill {
 		this.quanty = quanty;
 	}
 
-	public String getNote() {
-		return note;
+	public Date getDate() {
+		return date;
 	}
 
-	public void setNote(String note) {
-		this.note = note;
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 }

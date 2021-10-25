@@ -11,6 +11,7 @@
 <title>Trang khách hàng</title>
 </head>
 <body>
+	<h1>${ LoginInfo.role }Role</h1>
 	<h1>${ bills.size() }bills</h1>
 	<h1>${ billDetailsBill.size() }billDetails</h1>
 	<h1>${ products.size() }products</h1>
@@ -75,6 +76,7 @@
 															<tr>
 																<th>STT</th>
 																<th>Mã đơn hàng</th>
+																<th>Ngày Mua</th>
 																<th>Email</th>
 																<th>Địa chỉ</th>
 																<th>Giá trị đơn hàng</th>
@@ -93,11 +95,12 @@
 																<tr>
 																	<th>${ loopBill.index + 1 }</th>
 																	<th>${ item.id }</th>
+																	<th>${ item.date }</th>
 																	<th>${ item.email }</th>
 																	<th>${ item.address }</th>
 																	<th><fmt:formatNumber type="number"
 																			groupingUsed="true" value="${ item.total }" /> vnđ</th>
-																	<th>Chưa thanh toán</th>
+																	<th>${ item.status }</th>
 																	<th>Xác nhận</th>
 																</tr>
 

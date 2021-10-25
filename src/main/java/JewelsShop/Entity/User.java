@@ -7,6 +7,7 @@ public class User {
 	private String email;
 	private String password;
 	private String address;
+	private int role;
 
 	public User() {
 		super();
@@ -58,6 +59,14 @@ public class User {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public int getRole() {
+		return role;
+	}
+
+	public void setRole(int role) {
+		this.role = role;
 	}
 
 }
