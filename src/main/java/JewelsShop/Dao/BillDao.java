@@ -35,7 +35,7 @@ public class BillDao extends BaseDao {
 		sql.append(" '" + bill.getAddress() + "', ");
 		sql.append("  " + bill.getTotal() + " , ");
 		sql.append("  " + bill.getQuanty() + " , ");
-		sql.append(" '" + bill.getNote() + "' ");
+		sql.append(" '" + bill.getStatus() + "' ");
 		sql.append(")");
 		int insert = _jdbcTemplate.update(sql.toString());
 		return insert;

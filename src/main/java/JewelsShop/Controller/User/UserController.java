@@ -45,7 +45,8 @@ public class UserController extends BaseController {
 		List<BillDetail> billDetailsBill = new ArrayList<BillDetail>();
 		List<Product> products = new ArrayList<Product>();
 		User loginInfo = (User) session.getAttribute("LoginInfo");
-		if (loginInfo != null) {
+		if (loginInfo != null && !loginInfo.getEmail().equals("admin@gmail.com")) {
+			
 			bills = billService.GetBill(loginInfo.getEmail());
 			if (bills != null) {
 				for (Bill bill : bills) {
@@ -60,7 +61,9 @@ public class UserController extends BaseController {
 			mvShare.addObject("bills", bills);
 			mvShare.addObject("billDetailsBill", billDetailsBill);
 			mvShare.addObject("products", products);
-		} else {
+		} else if(loginInfo != null && loginInfo.getEmail().equals("admin@gmail.com")) { 
+			mvShare.setViewName("redirect:quan-tri/trang-chu");
+		}else {
 			mvShare.setViewName("redirect:dang-nhap");
 		}
 		mvShare.setViewName("user/account/info_account");
@@ -107,7 +110,12 @@ public class UserController extends BaseController {
 		user = accountService.CheckAccount(user);
 
 		if (user != null) {
-			mvShare.setViewName("redirect:trang-chu");
+			
+			if(user.getRole() == 0) {
+				mvShare.setViewName("redirect:/quan-tri/trang-chu");
+			} else {
+				mvShare.setViewName("redirect:trang-chu");
+			}
 			session.setAttribute("LoginInfo", user);
 		} else {
 			mvShare.addObject("statusLogin", "Đăng nhập thất bại");

@@ -67,7 +67,11 @@
 										<div class="recent-orders">
 											<div class="table-responsive tab-all"
 												style="overflow-x: auto;">
-
+												<c:if test="${ empty LoginInfo }">
+													<tr>
+														<td colspan="6"><p>Không có đơn hàng nào.</p></td>
+													</tr>
+												</c:if>
 												<c:forEach var="item" items="${ bills }"
 													varStatus="loopBill">
 
@@ -86,11 +90,7 @@
 														</thead>
 
 														<tbody>
-															<c:if test="${ empty LoginInfo }">
-																<tr>
-																	<td colspan="6"><p>Không có đơn hàng nào.</p></td>
-																</tr>
-															</c:if>
+
 															<c:if test="${ not empty LoginInfo }">
 																<tr>
 																	<th>${ loopBill.index + 1 }</th>
