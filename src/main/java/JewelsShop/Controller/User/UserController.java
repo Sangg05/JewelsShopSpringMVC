@@ -46,14 +46,18 @@ public class UserController extends BaseController {
 		List<Product> products = new ArrayList<Product>();
 		User loginInfo = (User) session.getAttribute("LoginInfo");
 		if (loginInfo != null && !loginInfo.getEmail().equals("admin@gmail.com")) {
-			
+
 			bills = billService.GetBill(loginInfo.getEmail());
 			if (bills != null) {
 				for (Bill bill : bills) {
 					List<BillDetail> billDetails = billService.GetBillDetails(bill.getId());
 					for (BillDetail billDetail : billDetails) {
 						Product product = productService.GetProductById(billDetail.getId_product());
-						products.add(product);
+
+						boolean isAdd = products.stream().anyMatch(o -> o.getId() == billDetail.getId_product());
+						if (!isAdd) {
+							products.add(product);
+						}
 					}
 					billDetailsBill.addAll(billDetails);
 				}
@@ -61,9 +65,9 @@ public class UserController extends BaseController {
 			mvShare.addObject("bills", bills);
 			mvShare.addObject("billDetailsBill", billDetailsBill);
 			mvShare.addObject("products", products);
-		} else if(loginInfo != null && loginInfo.getEmail().equals("admin@gmail.com")) { 
+		} else if (loginInfo != null && loginInfo.getEmail().equals("admin@gmail.com")) {
 			mvShare.setViewName("redirect:quan-tri/trang-chu");
-		}else {
+		} else {
 			mvShare.setViewName("redirect:dang-nhap");
 		}
 		mvShare.setViewName("user/account/info_account");
@@ -110,8 +114,8 @@ public class UserController extends BaseController {
 		user = accountService.CheckAccount(user);
 
 		if (user != null) {
-			
-			if(user.getRole() == 0) {
+
+			if (user.getRole() == 0) {
 				mvShare.setViewName("redirect:/quan-tri/trang-chu");
 			} else {
 				mvShare.setViewName("redirect:trang-chu");
@@ -124,8 +128,9 @@ public class UserController extends BaseController {
 	}
 
 	@RequestMapping(value = "/dang-xuat", method = RequestMethod.GET)
-	public String SignOut(HttpSession session, HttpServletRequest request) {
+	public ModelAndView SignOut(HttpSession session, HttpServletRequest request) {
 		session.removeAttribute("LoginInfo");
-		return "redirect:" + request.getHeader("Referer");
+		mvShare.setViewName("redirect:trang-chu");
+		return mvShare;
 	}
 }

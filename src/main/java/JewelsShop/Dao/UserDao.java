@@ -41,4 +41,10 @@ public class UserDao extends BaseDao {
 	        return result.get(0);
 	    }
 	}
+	
+	public List<User> GetAllAccount(){
+		String sql = "SELECT * FROM user";
+		List<User> result = _jdbcTemplate.query(sql, new MapperUser());
+		return result;
+	}
 }

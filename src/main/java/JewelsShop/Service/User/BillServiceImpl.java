@@ -20,10 +20,16 @@ public class BillServiceImpl implements IBill {
 	public int AddBill(Bill bill) {
 		return billDao.AddBill(bill);
 	}
+	
+	public List<Bill> GetAllBill() {
+		return billDao.GetAllBill();
+	}
 
 	public List<Bill> GetBill(String email) {
 		return billDao.GetBill(email);
 	}
+	
+	
 
 	public void AddBillDetail(HashMap<Long, CartDto> carts) {
 		long idBill = billDao.getIDLastBill();

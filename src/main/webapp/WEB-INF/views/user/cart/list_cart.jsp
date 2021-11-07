@@ -82,11 +82,13 @@
 
 						</tbody>
 					</table>
+					<hr class="soften" />
 					<h1>${ message }</h1>
 					<br /> <a href=<c:url value="/trang-chu"/> class="shopBtn btn-large"><span
 						class="icon-arrow-left"></span> Tiếp tục mua sắm </a> <a
 						href="checkout" class="shopBtn btn-large pull-right">Thanh
-						toán <span class="icon-arrow-right"></span>
+						toán <fmt:formatNumber type="number" groupingUsed="true"
+													value="${ TotalPriceCart }" /> ₫ <span class="icon-arrow-right"></span>
 					</a>
 
 				</div>

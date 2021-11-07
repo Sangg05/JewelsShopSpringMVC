@@ -1,83 +1,213 @@
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Danh sách hóa đơn</title>
+<meta charset="UTF-8">
+<title>Trang khách hàng</title>
 </head>
 <body>
-
-
-
-	<div class="inner-block">
-		<div class="inbox">
-			<h2>Quản lí đơn hàng</h2>
-			<div class="col-md-12 mailbox-content  tab-content tab-content-in">
-				<div class="tab-pane active text-style" id="tab1">
-					<div class="mailbox-border">
-						<div class="mail-toolbar clearfix">
-							<div class="float-left">
-								<div class="btn btn_1 btn-default mrg5R">
-									<i class="fa fa-refresh"> </i>
-								</div>
-
-								<div class="clearfix"></div>
+	<div class="container edit-brc">
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="breadcrumb" itemscope
+					itemtype="http://schema.org/BreadcrumbList">
+					<li class="home" itemprop="itemListElement" itemscope
+						itemtype="http://schema.org/ListItem"><a itemprop="url"
+						itemprop="item" href="/"><span itemprop="name"><i
+								class="fa fa-home"></i> Trang chủ</span>
+							<meta itemprop="position" content="1" /></a> <span>/</span></li>
+					<li><strong itemprop="name">Thanh toán</strong></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<section class="signup page_customer_account">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-main-acount">
+					<div id="parent" class="row">
+						<div id="a" class="col-xs-12 col-sm-12 col-lg-9 col-left-account">
+							<div class="page-title m992">
+								<h1 class="title-head margin-top-0">
+									<a href="#">Thông tin tài khoản</a>
+								</h1>
 							</div>
-							<div class="float-right">
-								<span class="text-muted m-r-sm">Showing ${countItem} of
-									${totalItem} </span>
-								<div class="btn-group">
-									<a class="btn btn-default"><i class="fa fa-angle-left"></i></a>
-									<c:forEach var="i" begin="0" end="${page}">
-										<a class="btn btn-default" href="admin/bill/${i+1}.htm"><c:out
-												value="${i+1}" /></a>
-									</c:forEach>
-									<a class="btn btn-default"><i class="fa fa-angle-right"></i></a>
+							<div class="form-signup name-account m992">
+								<p>
+									<strong>Xin chào, <a href="/account/addresses"
+										style="color: #42210b;">${ LoginInfo.lastname }</a>&nbsp;!
+									</strong>
+								</p>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-lg-12 no-padding">
+								<div class="my-account">
+									<div class="dashboard">
+
+										<div class="recent-orders">
+											<div class="table-responsive tab-all"
+												style="overflow-x: auto;">
+												<c:if test="${ empty LoginInfo }">
+													<tr>
+														<td colspan="6"><p>Không có đơn hàng nào.</p></td>
+													</tr>
+												</c:if>
+												<c:forEach var="item" items="${ bills }"
+													varStatus="loopBill">
+
+													<table class="table table-cart" id="my-orders-table">
+														<thead class="thead-default">
+															<tr>
+																<th>STT</th>
+																<th>Mã đơn hàng</th>
+																<th>Ngày Mua</th>
+																<th>Email</th>
+																<th>Địa chỉ</th>
+																<th>Giá trị đơn hàng</th>
+																<th>Tình trạng thanh toán</th>
+																<th>Trạng thái</th>
+															</tr>
+														</thead>
+
+														<tbody>
+
+															<c:if test="${ not empty LoginInfo }">
+																<tr>
+																	<th>${ loopBill.index + 1 }</th>
+																	<th>${ item.id }</th>
+																	<th>${ item.date }</th>
+																	<th>${ item.email }</th>
+																	<th>${ item.address }</th>
+																	<th><fmt:formatNumber type="number"
+																			groupingUsed="true" value="${ item.total }" /> vnđ</th>
+																	<th>${ item.status }</th>
+																	<th>Xác nhận</th>
+																</tr>
+
+																<table class="table table-bordered table-condensed">
+																	<thead>
+																		<tr>
+																			<th>Hình ảnh</th>
+																			<th>Mô tả</th>
+																			<th>Giá bán</th>
+																			<th>Số lượng</th>
+																			<th>Tổng tiền</th>
+																		</tr>
+																	</thead>
+																	<c:forEach var="itemBillDetail"
+																		items="${ billDetailsBill }"
+																		varStatus="loopBillDetail">
+
+																		<c:if test="${item.id == itemBillDetail.id_bill}">
+																			<c:forEach var="itemPro" items="${ products }"
+																				varStatus="loopPro">
+																				<c:if
+																					test="${ itemPro.id == itemBillDetail.id_product}">
+																					<tr>
+																						<td><img width="80" height="100"
+																							src="<c:url value="/assets/user/images/product/${ itemPro.image }"/>"
+																							alt=""></td>
+																						<td>${ itemPro.name }</td>
+
+																						<td><fmt:formatNumber type="number"
+																								groupingUsed="true" value="${ itemPro.price }" />
+																							₫</td>
+
+																						<td>${ itemBillDetail.quanty }</td>
+																						
+																						<td><fmt:formatNumber type="number"
+																								groupingUsed="true"
+																								value="${ itemBillDetail.total }" /> ₫</td>
+																					</tr>
+																				</c:if>
+																				</tbody>
+																			</c:forEach>
+																		</c:if>
+
+																	</c:forEach>
+
+																</table>
+															</c:if>
+
+														</tbody>
+													</table>
+
+													<hr>
+
+												</c:forEach>
+											</div>
+
+											<div class="text-xs-right"></div>
+										</div>
+										<div class="paginate-pages pull-right page-account">
+											<nav class="clearfix">
+												<ul class="pagination clearfix f-right">
+
+													<li class="page-item disabled"><a class="page-link"
+														href="#">«</a></li>
+
+													<li class="page-item disabled"><a class="page-link"
+														href="#">»</a></li>
+
+												</ul>
+											</nav>
+										</div>
+									</div>
+
 								</div>
-								<div class="clearfix"></div>
 							</div>
 						</div>
-						<table class="table tab-border">
-							<tbody>
-								<tr class="unread checked">
-									<td class="hidden-xs">Mã đơn hàng</td>
-									<td class="hidden-xs">Người đặt hàng</td>
-									<td>Thời gian đặt hàng</td>
-									<td>Thời gian thanh toán</td>
-									<td>Tình trạng</td>
-									<td></td>
-								</tr>
-								<c:forEach var="item" items="${listBill}">
-									<tr class="unread checked">
-										<td class="hidden-xs">${item.id}</td>
-										<td class="hidden-xs">${item.user.displayName}</td>
-										<td><fmt:formatDate pattern="dd/MM/yyyy"
-												value="${item.checkin}" /></td>
-										<td><fmt:formatDate pattern="dd/MM/yyyy"
-												value="${item.checkout}" /></td>
-										<td>${item.billStatus.name }</td>
-										<td style="text-align: center; width: 150px;"><a
-											class="btn btn-default"
-											href="admin/bill/detail/${item.id}.htm"><i
-												class="fa fa-eye"></i></a> <a class="btn btn-default"
-											href="admin/bill/updateStatus/${item.id}.htm"><i
-												class="fa fa-check"></i></a> <a class="btn btn-default"
-											href="admin/bill/remove/${item.id}.htm"><i
-												class="fa fa-remove"></i></a></td>
-									</tr>
-								</c:forEach>
-							</tbody>
-						</table>
+						<div id="b"
+							class="col-xs-12 col-sm-12 col-lg-3 col-right-account margin-top-20">
+							<div class="page-title mx991">
+								<h1 class="title-head">
+									<a href="#">Thông tin tài khoản</a>
+								</h1>
+							</div>
+							<div class="form-signup body_right mx991">
+								<p>
+									<strong>Xin chào, <a href="/account/addresses"
+										style="color: #42210b;">${ LoginInfo.lastname }</a>&nbsp;!
+									</strong>
+								</p>
+							</div>
+							<div class="block-account">
+								<div class="block-title-account">
+									<h5>Tài khoản của tôi</h5>
+								</div>
+								<div class="block-content form-signup">
+									<p>
+										Tên tài khoản: <strong style="line-height: 20px;"> ${ LoginInfo.lastname }</strong>
+									</p>
+									<p>
+										<i class="fa fa-home font-some" aria-hidden="true"></i> <span>Địa
+											chỉ: ${ LoginInfo.address } </span>
+									</p>
+									<p>
+										<i class="fa fa-mobile font-some" aria-hidden="true"></i> <span>Điện
+											thoại: </span>
+									</p>
+
+									<p>
+										<i class="fa fa-yelp font-some" aria-hidden="true"></i> <span>
+											Công ty: </span>
+									</p>
+									<p>
+										<i class="fa fa-plane font-some" aria-hidden="true"></i> <span>
+											Quốc gia :</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>
-			<div class="clearfix"></div>
 		</div>
-	</div>
-
-
-
+	</section>
 </body>
 </html>

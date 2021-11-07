@@ -64,12 +64,12 @@
 										<form:textarea path="address"></form:textarea>
 									</div>
 								</div>
-								<div class="control-group">
+								<%-- <div class="control-group">
 									<label class="control-label">Ghi chú<sup></sup></label>
 									<div class="controls">
 										<form:textarea path="note"></form:textarea>
 									</div>
-								</div>
+								</div> --%>
 								<div class="control-group">
 									<div class="controls">
 										<input type="submit" name="submitAccount" value="Thanh toán"

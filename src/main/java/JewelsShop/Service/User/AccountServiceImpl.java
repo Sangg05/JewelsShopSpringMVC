@@ -1,5 +1,7 @@
 package JewelsShop.Service.User;
 
+import java.util.List;
+
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +22,10 @@ public class AccountServiceImpl implements IAccount {
 			user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt(12)));
 			return userDao.AddAccount(user);
 		}
+	}
+	
+	public List<User> GetAllAccount() {
+		return userDao.GetAllAccount();
 	}
 
 	public User CheckAccount(User user) {

@@ -35,9 +35,7 @@
 						itemprop="item" href="/"><span itemprop="name"><i
 								class="fa fa-home"></i> Trang chủ</span>
 							<meta itemprop="position" content="1" /></a> <span>/</span></li>
-
 					<li><strong itemprop="name">Trang khách hàng</strong></li>
-
 				</ul>
 			</div>
 		</div>
