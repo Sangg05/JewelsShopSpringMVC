@@ -8,6 +8,15 @@ public class User {
 	private String password;
 	private String address;
 	private int role;
+	private int active;
+
+	public int getActive() {
+		return active;
+	}
+
+	public void setActive(int active) {
+		this.active = active;
+	}
 
 	public User() {
 		super();

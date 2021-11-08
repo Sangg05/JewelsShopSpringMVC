@@ -117,10 +117,16 @@ public class UserController extends BaseController {
 
 			if (user.getRole() == 0) {
 				mvShare.setViewName("redirect:/quan-tri/trang-chu");
+				session.setAttribute("LoginInfo", user);
+				session.setAttribute("user", user.getRole() == 0 ? "admin" : "user");
+			} else if (user.getActive() == 0) {
+				mvShare.setViewName("redirect:/not-permission");
 			} else {
 				mvShare.setViewName("redirect:trang-chu");
+				session.setAttribute("LoginInfo", user);
+				session.setAttribute("user", user.getRole() == 0 ? "admin" : "user");
 			}
-			session.setAttribute("LoginInfo", user);
+
 		} else {
 			mvShare.addObject("statusLogin", "Đăng nhập thất bại");
 		}

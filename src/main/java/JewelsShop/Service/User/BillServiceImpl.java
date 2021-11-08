@@ -29,6 +29,10 @@ public class BillServiceImpl implements IBill {
 		return billDao.GetBill(email);
 	}
 	
+	public int GetCountBill(String email) {
+		return billDao.GetCountBill(email);
+	}
+	
 	
 
 	public void AddBillDetail(HashMap<Long, CartDto> carts) {

@@ -7,6 +7,7 @@
 <title>Danh sách người dùng</title>
 </head>
 <body>
+	<h1>${ countBills.size() }</h1>
 	<div class="inner-block">
 		<div class="inbox">
 
@@ -70,12 +71,15 @@
 																			<th>${ item.id }</th>
 																			<th>${ item.lastname }</th>
 																			<th>${ item.firstname }</th>
-																			<th>${ item.email }</th>
+																			<th><a
+																				href=<c:url value="/quan-tri/hop-thu/${ item.email }"/>>${ item.email }</a>
+																			</th>
 																			<th><c:if test="${ item.role == 1 }">Người dùng</c:if>
 																				<c:if test="${ item.role == 0 }">Quản trị viên</c:if>
 																			</th>
-																			<th>0 đơn hàng</th>
-																			<th>active</th>
+																			<th>${ countBills[loop.index] }đơnhàng</th>
+																			<th><c:if test="${ item.active == 1 }">Hoạt động</c:if>
+																				<c:if test="${ item.active == 0 }">Vô hiệu</c:if></th>
 																		</tr>
 																	</c:if>
 																</c:forEach>

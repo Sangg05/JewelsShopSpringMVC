@@ -32,7 +32,36 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 
+	<!-- Spring Mail Sender -->
+	<!-- 1.Login to Gmail. 2.Access the URL as https://www.google.com/settings/security/lesssecureapps 
+		3.Select "Turn on" -->
+	<bean id="mailSender"
+		class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="465" />
+		<property name="username" value="luongsang010@gmail.com" />
+		<property name="password" value="daikaka999" />
+		<property name="defaultEncoding" value="UTF-8" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+				<prop key="mail.smtp.socketFactory.port">465</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.debug">true</prop>
+			</props>
+		</property>
+	</bean>
+
 	<mvc:annotation-driven />
 	<mvc:resources mapping="/assets/**" location="/assets/" />
-	
+
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/quan-tri/**" />
+			<bean class="JewelsShop.Intercepter.LoggerIntercaepter"></bean>
+		</mvc:interceptor>
+
+	</mvc:interceptors>
+
 </beans>

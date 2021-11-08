@@ -85,6 +85,14 @@ public class BillDao extends BaseDao {
 		}
 	}
 
+	public int GetCountBill(String email) {
+		String sql = "SELECT COUNT(id) FROM bill WHERE email = '" + email.trim() + "'";
+		int count = _jdbcTemplate.queryForObject(sql.toString(), new Object[] {}, Integer.class);
+
+		return count;
+
+	}
+
 	public List<BillDetail> GetBillDetails(long id_bill) {
 		String sql = "SELECT * FROM billdetail WHERE id_bill = " + id_bill;
 		List<BillDetail> list = new ArrayList<BillDetail>();

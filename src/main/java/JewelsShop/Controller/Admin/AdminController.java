@@ -43,6 +43,13 @@ public class AdminController extends BaseController {
 		return mvShare;
 	}
 
+	@RequestMapping(value = { "/not-permission" })
+	public ModelAndView NotPermission() {
+
+		mvShare.setViewName("layouts/not_permission");
+		return mvShare;
+	}
+
 	@RequestMapping(value = { "/quan-tri/dang-nhap" })
 	public ModelAndView Login() {
 
@@ -59,11 +66,17 @@ public class AdminController extends BaseController {
 
 	@RequestMapping(value = { "/quan-tri/nguoi-dung" })
 	public ModelAndView User() {
-		
+
 		List<User> users = accountService.GetAllAccount();
-		
+		List<Integer> countBills = new ArrayList<Integer>();
+
+		for (User user : users) {
+			countBills.add(billService.GetCountBill(user.getEmail()));
+		}
+
+		mvShare.addObject("countBills", countBills);
 		mvShare.addObject("users", users);
-		
+
 		mvShare.setViewName("admin/user_manage/user_list");
 		return mvShare;
 	}
@@ -102,10 +115,10 @@ public class AdminController extends BaseController {
 		return mvShare;
 	}
 
-	@RequestMapping(value = { "/quan-tri/hop-thu" })
-	public ModelAndView MailBox() {
-
-		mvShare.setViewName("admin/mailbox/mailbox_list");
-		return mvShare;
-	}
+//	@RequestMapping(value = { "/quan-tri/hop-thu" })
+//	public ModelAndView MailBox() {
+//
+//		mvShare.setViewName("admin/mailbox/mailbox_list");
+//		return mvShare;
+//	}
 }

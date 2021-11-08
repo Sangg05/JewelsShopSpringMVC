@@ -80,7 +80,9 @@
 																	<th>${ loopBill.index + 1 }</th>
 																	<th>${ item.id }</th>
 																	<th>${ item.date }</th>
-																	<th>${ item.email }</th>
+																	<th><a
+																		href=<c:url value="/quan-tri/hop-thu/${ item.email }"/>>${ item.email }</a>
+																	</th>
 																	<th>${ item.address }</th>
 																	<th><fmt:formatNumber type="number"
 																			groupingUsed="true" value="${ item.total }" /> vnđ</th>
@@ -118,7 +120,7 @@
 																							₫</td>
 
 																						<td>${ itemBillDetail.quanty }</td>
-																						
+
 																						<td><fmt:formatNumber type="number"
 																								groupingUsed="true"
 																								value="${ itemBillDetail.total }" /> ₫</td>
