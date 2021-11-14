@@ -53,6 +53,18 @@
 		</property>
 	</bean>
 
+	<!--File upload configuration -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- The encoding format of the request must be and jSP of pageEncoding 
+			Property is consistent so that the contents of the form can be read correctly. 
+			The default is ISO-8859-1 -->
+		<property name="defaultEncoding" value="utf-8" />
+		<!-- Maximum upload file size, in bytes (10485760)=10M) -->
+		<property name="maxUploadSize" value="10485760" />
+		<property name="maxInMemorySize" value="40960" />
+	</bean>
+
 	<mvc:annotation-driven />
 	<mvc:resources mapping="/assets/**" location="/assets/" />
 

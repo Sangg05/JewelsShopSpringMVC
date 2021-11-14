@@ -15,5 +15,13 @@ public class HomeController extends BaseController {
 		mvShare.setViewName("user/index");
 		return mvShare;
 	}
+	
+	@RequestMapping(value = { "/form" })
+	public ModelAndView UploadFile() {
+
+		mvShare.setViewName("admin/upload");
+		return mvShare;
+	}
+
 
 }

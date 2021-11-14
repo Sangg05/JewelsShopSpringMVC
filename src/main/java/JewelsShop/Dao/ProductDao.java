@@ -39,4 +39,16 @@ public class ProductDao extends BaseDao {
 		return list;
 	}
 
+	public int AddProduct(Product product) {
+		String sql = "INSERT INTO " + "products ( " + "id_category, " + "name, " + "price, " + "sale, " + "title, "
+				+ "highlight, " + "new_product, " + "detail, " + "create_at, " + "update_at, " + "image) " + "VALUES ("
+				+ product.getId_category() + ", " + "'" + product.getName() + "'," + product.getPrice() + "," + 0 + ","
+				+ "'" + product.getTitle() + "'," + 1 + "," + 0 + "," + "'" + product.getDetail() + "'," + "'"
+				+ "2021-10-12 00:00:00'," + "'2021-10-12 00:00:00'," + "'" + product.getImage() + "')";
+
+		int insert = _jdbcTemplate.update(sql.toString());
+
+		return insert;
+	}
+
 }

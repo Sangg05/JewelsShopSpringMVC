@@ -3,11 +3,14 @@ package JewelsShop.Controller.Admin;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import JewelsShop.Controller.User.BaseController;
@@ -114,11 +117,6 @@ public class AdminController extends BaseController {
 		mvShare.setViewName("admin/bills/bill_list");
 		return mvShare;
 	}
-
-//	@RequestMapping(value = { "/quan-tri/hop-thu" })
-//	public ModelAndView MailBox() {
-//
-//		mvShare.setViewName("admin/mailbox/mailbox_list");
-//		return mvShare;
-//	}
+	
+	
 }

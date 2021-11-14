@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="UTF-8" />
 <title>Đăng ký tài khoản</title>
 </head>
 <body>
@@ -45,25 +45,21 @@
 				<div class="page-login">
 					<div id="login">
 						<span>Nếu chưa có tài khoản vui lòng đăng ký tại đây</span>
-						
-						<form:form action="dang-ky" method="post" modelAttribute="user">
+						<form:form action="${pageContext.request.contextPath}/dang-ky"
+							method="POST" modelAttribute="user" enctype="multipart/form-data">
 							<div class="form-signup"></div>
 							<div class="form-signup clearfix">
 								<div class="row">
 									<div class="col-md-6">
 										<fieldset class="form-group">
 											<label> Họ<span class="required">*</span></label>
-											<form:input type="text" class="form-control form-control-lg"
-												value="" name="lastName" id="lastname" placeholder=""
-												required="" path="lastname" />
+											<form:input type="text" placeholder="" path="lastname" />
 										</fieldset>
 									</div>
 									<div class="col-md-6">
 										<fieldset class="form-group">
 											<label>Tên <span class="required">*</span></label>
-											<form:input type="text" class="form-control form-control-lg"
-												value="" name="firstName" id="firstname" placeholder=""
-												required="" path="firstname" />
+											<form:input type="text" path="firstname" />
 										</fieldset>
 									</div>
 								</div>
@@ -89,13 +85,14 @@
 										</fieldset>
 									</div>
 								</div>
-								<p style="color:red;">${ status }</p>
+								<p style="color: red;">${ status }</p>
 								<div id="social_login_widget"></div>
 								<div class="col-xs-12 text-xs-left"
 									style="margin-top: 30px; padding: 0">
 									<button type="summit" value="Đăng ký"
 										class="btn  btn-style btn-primary">Đăng ký</button>
-									<a href="<c:url value='/dang-nhap'/>" class="btn-link-style btn-register"
+									<a href="<c:url value='/dang-nhap'/>"
+										class="btn-link-style btn-register"
 										style="margin-left: 20px; text-decoration: underline;">Đăng
 										nhập</a>
 								</div>

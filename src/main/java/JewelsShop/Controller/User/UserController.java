@@ -75,7 +75,7 @@ public class UserController extends BaseController {
 	}
 
 	@RequestMapping(value = "/dang-ky", method = RequestMethod.GET)
-	public ModelAndView Register() {
+	public ModelAndView Register(HttpServletRequest request, HttpSession session) {
 		mvShare.setViewName("user/account/register");
 		mvShare.addObject("user", new User());
 		return mvShare;

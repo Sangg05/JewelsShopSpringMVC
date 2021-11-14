@@ -16,5 +16,10 @@ public class ProductServiceImpl implements IProduct {
 
 		return productsDao.GetProductById(id);
 	}
+	
+	public int AddProduct(Product product) {
+
+		return productsDao.AddProduct(product);
+	}
 
 }

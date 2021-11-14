@@ -183,7 +183,7 @@
 							class="fa fa-userss"></i></a>
 						<ul class="account-ct">
 
-							<li><i class="fa fa-user"></i> ${ LoginInfo.lastname }</li>
+							<li><i class="fa fa-user"></i> ${ LoginInfo.firstname }</li>
 
 							<li><a href=<c:url value="/dang-xuat"/>><i
 									class="fa  fa-sign-out"></i> Đăng xuất</a></li>

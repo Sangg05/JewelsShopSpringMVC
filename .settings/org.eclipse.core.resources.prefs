@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/main/java/JewelsShop/Controller/Admin/ProductAdminController.java=UTF-8
 encoding//src/main/java/JewelsShop/Controller/Mail/MailerController.java=UTF-8
 encoding//src/main/java/JewelsShop/Controller/User/CartController.java=UTF-8
 encoding//src/main/java/JewelsShop/Controller/User/SearchController.java=UTF-8

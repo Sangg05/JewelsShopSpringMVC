@@ -181,7 +181,7 @@
 						<a class="icon-cricle" href=<c:url value="/info"/>><i class="fa fa-userss"></i></a>
 						<ul class="account-ct">
 
-							<li><a href=<c:url value="/info"/>><i class="fa fa-user"></i> ${ LoginInfo.lastname }
+							<li><a href=<c:url value="/info"/>><i class="fa fa-user"></i> ${ LoginInfo.firstname }
 							</a></li>
 
 							<li><a class="iWishView" href="<c:url value='/trang-chu'/>"

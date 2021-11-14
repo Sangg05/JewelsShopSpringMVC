@@ -10,7 +10,6 @@
 <title>product list</title>
 </head>
 <body>
-	<h1>${ cate.size() }</h1>
 	<div class="bg-light p-5 rounded">
 		<jsp:useBean id="pagedListHolder" scope="request"
 			type="org.springframework.beans.support.PagedListHolder" />
@@ -25,6 +24,15 @@
 				<div class="category-products products style">
 
 					<div class="sortPagiBar margin-bottom-30">
+						<div class="form-group form-groupx form-detail-action ">
+							<a href="/JewelsShop/quan-tri/them-san-pham" class="shopBtn">
+								<div
+									style="text-align: center; border-style: solid; border-width: 10px; border-color: #2e1c11; background-color: #2e1c11;">
+									<span style="color: #ffffff; font-size: 15px">Thêm sản
+										phẩm mới</span>
+								</div>
+							</a>
+						</div>
 						<div class="row">
 							<div class="col-xs-5 col-sm-8 col-lg-9 hidden-xs">
 								<div class="view-mode">
@@ -76,6 +84,7 @@
 									</ul>
 								</div>
 							</div>
+
 						</div>
 					</div>
 
@@ -100,8 +109,8 @@
 
 
 												</a> <a class="db pa back oh"
-													href="/JewelsShop/quan-tri/product/${item.id}" title="${item.name}">
-													<img
+													href="/JewelsShop/quan-tri/product/${item.id}"
+													title="${item.name}"> <img
 													src="<c:url value='/assets/user/images/product/${item.image}'/>"
 													alt="NEW COLLECTIONS - E STUD BIG CIRCLE MULTI DROP BALL"
 													class="img-responsive center-block" />
@@ -112,14 +121,13 @@
 												<div class="htheme_product_overlay_fade"></div>
 											</div>
 											<div class="product-action clearfix">
-												<form action=""
-													method="get" class="variants form-nut-grid"
+												<form action="" method="get" class="variants form-nut-grid"
 													data-id="product-actions-18810516"
 													enctype="multipart/form-data">
 
 													<div>
 
-														
+
 
 
 														<button class="btn btn-circle left-to "
