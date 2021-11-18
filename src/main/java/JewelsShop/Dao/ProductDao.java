@@ -51,4 +51,22 @@ public class ProductDao extends BaseDao {
 		return insert;
 	}
 
+	public int EditProduct(Product product) {
+		String sql = "UPDATE products " + "SET " + "id_category=" + product.getId_category() + "," + "name='"
+				+ product.getName() + "'," + "price=" + product.getPrice() + "," + "sale=0," + "title='"
+				+ product.getTitle() + "'," + "highlight=1," + "new_product=0," + "detail='" + product.getDetail()
+				+ "'," + "create_at='2021-10-12 00:00:00'," + "update_at='2021-10-12 00:00:00'," + "image='"
+				+ product.getImage() + "' " + "WHERE id = " + product.getId();
+
+		int edit = _jdbcTemplate.update(sql.toString());
+
+		return edit;
+	}
+
+	public int DeleteProduct(long id) {
+		String sql = "DELETE FROM products WHERE id = " + id;
+		int delete = _jdbcTemplate.update(sql.toString());
+		return delete;
+	}
+
 }

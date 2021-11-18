@@ -21,5 +21,15 @@ public class ProductServiceImpl implements IProduct {
 
 		return productsDao.AddProduct(product);
 	}
+	
+	public int EditProduct(Product product) {
+
+		return productsDao.EditProduct(product);
+	}
+	
+	public int DeleteProduct(long id) {
+
+		return productsDao.DeleteProduct(id);
+	}
 
 }

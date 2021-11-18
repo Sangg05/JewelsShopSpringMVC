@@ -135,7 +135,8 @@
 							<div class="price-box">
 
 								<div class="special-price">
-									<span class="price product-price">Giá: ${product.price} ₫</span>
+									<span class="price product-price">Giá: ${product.price}
+										₫</span>
 								</div>
 								<!-- Giá -->
 
@@ -143,34 +144,35 @@
 							</div>
 
 							<div class="form-product">
-								<form enctype="multipart/form-data" id="add-to-cart-form"
-									action="<c:url value="/AddCart/${ product.id }"/>" method="get"
-									class="form-inline margin-bottom-10">
-
-									<div class="box-variant clearfix ">
 
 
-										<input type="hidden" name="variantId" value="44240150" />
+								<div class="form-group form-groupx form-detail-action ">
 
+									<a href="<c:url value='/quan-tri/sua-san-pham/${ product.id }'/>"
+										class="shopBtn">
+										<div
+											style="text-align: center; border-style: solid; border-width: 10px; border-color: #2e1c11; background-color: #2e1c11;">
+											<span style="color: #ffffff; font-size: 15px">Chỉnh
+												sửa thông tin sản phẩm</span>
+										</div>
+									</a>
+									
+									<br>
+									
+									<a href="<c:url value='/quan-tri/xoa-san-pham/${ product.id }'/>"
+										class="shopBtn">
+										<div
+											style="text-align: center; border-style: solid; border-width: 10px; border-color: #2e1c11; background-color: #2e1c11;">
+											<span style="color: #ffffff; font-size: 15px">Xóa sản phẩm</span>
+										</div>
+									</a>
+									<div class="abps-productdetail ab-hide"
+										ab-data-productid="18810429"></div>
 
-									</div>
-									<div class="form-group form-groupx form-detail-action ">
-										
-										<button type="submit" class="shopBtn">
-											<div
-												style="text-align: center; border-style: solid; border-width: 10px; border-color: #2e1c11; background-color: #2e1c11;">
-												<span style="color: #ffffff; font-size: 15px">Chỉnh
-													sửa thông tin sản phẩm</span>
-											</div>
-										</button>
-										<div class="abps-productdetail ab-hide"
-											ab-data-productid="18810429"></div>
+								</div>
 
-									</div>
+								<br />
 
-									<br /> 
-
-								</form>
 								<div class="md-discount-box-inform" id="md-discount-box-inform"></div>
 
 								<div class="social-sharing">
