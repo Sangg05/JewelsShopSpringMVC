@@ -213,7 +213,7 @@ public class ProductAdminController extends BaseController {
 
 	@RequestMapping(value = { "quan-tri/xoa-san-pham/{id}" })
 	public ModelAndView DeleteProduct(@PathVariable long id) {
-		ModelAndView mvShare = new ModelAndView();
+		
 		int i = productService.DeleteProduct(id);
 
 		if (i > 0) {

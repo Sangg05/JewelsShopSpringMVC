@@ -111,4 +111,10 @@ public class BillDao extends BaseDao {
 		}
 	}
 
+	public int ApprovedBill(long id) {
+		String sql = "UPDATE `bill` SET `status`='Đã xác nhận' WHERE id = " + id;
+		int i = _jdbcTemplate.update(sql.toString());
+		return i;
+	}
+
 }

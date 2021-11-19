@@ -53,6 +53,10 @@ public class BillServiceImpl implements IBill {
 	public List<BillDetail> GetBillDetails(long id_bill) {
 		return billDao.GetBillDetails(id_bill);
 	}
+
+	public int ApprovedBill(long id) {
+		return billDao.ApprovedBill(id);
+	}
 	
 
 }

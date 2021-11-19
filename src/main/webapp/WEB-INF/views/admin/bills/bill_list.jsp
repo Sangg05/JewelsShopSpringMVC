@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,7 +67,7 @@
 																<th>Email</th>
 																<th>Địa chỉ</th>
 																<th>Giá trị đơn hàng</th>
-																<th>Tình trạng thanh toán</th>
+																<!-- <th>Tình trạng thanh toán</th> -->
 																<th>Trạng thái</th>
 															</tr>
 														</thead>
@@ -86,10 +85,14 @@
 																	<th>${ item.address }</th>
 																	<th><fmt:formatNumber type="number"
 																			groupingUsed="true" value="${ item.total }" /> vnđ</th>
-																	<th>${ item.status }</th>
-																	<th>Xác nhận</th>
-																</tr>
+																	<%-- <th>${ item.status }</th> --%>
 
+																	<th><a
+																		href="<c:url value="/ApprovedCart/${item.id}/${ item.email }"/>"
+																		class="btn btn-mini btn-primary" type="button"> <i
+																			class="fa fa-spinner"></i> ${ item.status }
+																	</a></th>
+																</tr>
 																<table class="table table-bordered table-condensed">
 																	<thead>
 																		<tr>
