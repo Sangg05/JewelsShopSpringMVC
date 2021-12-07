@@ -8,6 +8,7 @@
 </head>
 <body>
 	<h1>${ countBills.size() }</h1>
+	<h1>${ mess }</h1>
 	<div class="inner-block">
 		<div class="inbox">
 
@@ -78,8 +79,14 @@
 																				<c:if test="${ item.role == 0 }">Quản trị viên</c:if>
 																			</th>
 																			<th>${ countBills[loop.index] }đơnhàng</th>
-																			<th><c:if test="${ item.active == 1 }">Hoạt động</c:if>
-																				<c:if test="${ item.active == 0 }">Vô hiệu</c:if></th>
+
+																			<th><a
+																				href="<c:url value="/ChangeStatusUser/${item.id}/${item.active}"/>"
+																				class="btn btn-mini btn-primary" type="button">
+																					<c:if test="${ item.active == 1 }">Đang hoạt động</c:if>
+																					<c:if test="${ item.active == 0 }">Vô hiệu hóa</c:if>
+																			</a></th>
+
 																		</tr>
 																	</c:if>
 																</c:forEach>

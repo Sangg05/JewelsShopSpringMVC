@@ -23,7 +23,7 @@ public class AccountServiceImpl implements IAccount {
 			return userDao.AddAccount(user);
 		}
 	}
-	
+
 	public List<User> GetAllAccount() {
 		return userDao.GetAllAccount();
 	}
@@ -45,6 +45,10 @@ public class AccountServiceImpl implements IAccount {
 			return user;
 		}
 		return null;
+	}
+
+	public int ChangeStatusUser(long id, int status) {
+		return userDao.ChangeStatusUser(id, status);
 	}
 
 }

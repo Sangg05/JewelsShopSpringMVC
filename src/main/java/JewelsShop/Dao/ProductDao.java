@@ -52,11 +52,21 @@ public class ProductDao extends BaseDao {
 	}
 
 	public int EditProduct(Product product) {
-		String sql = "UPDATE products " + "SET " + "id_category=" + product.getId_category() + "," + "name='"
-				+ product.getName() + "'," + "price=" + product.getPrice() + "," + "sale=0," + "title='"
-				+ product.getTitle() + "'," + "highlight=1," + "new_product=0," + "detail='" + product.getDetail()
-				+ "'," + "create_at='2021-10-12 00:00:00'," + "update_at='2021-10-12 00:00:00'," + "image='"
-				+ product.getImage() + "' " + "WHERE id = " + product.getId();
+
+		String sql = "";
+		if (product.getImage() != null) {
+			sql = "UPDATE products " + "SET " + "id_category=" + product.getId_category() + "," + "name='"
+					+ product.getName() + "'," + "price=" + product.getPrice() + "," + "sale=0," + "title='"
+					+ product.getTitle() + "'," + "highlight=1," + "new_product=0," + "detail='" + product.getDetail()
+					+ "'," + "create_at='2021-10-12 00:00:00'," + "update_at='2021-10-12 00:00:00'," + "image='"
+					+ product.getImage() + "' " + "WHERE id = " + product.getId();
+		} else {
+			sql = "UPDATE products " + "SET " + "id_category=" + product.getId_category() + "," + "name='"
+					+ product.getName() + "'," + "price=" + product.getPrice() + "," + "sale=0," + "title='"
+					+ product.getTitle() + "'," + "highlight=1," + "new_product=0," + "detail='" + product.getDetail()
+					+ "'," + "create_at='2021-10-12 00:00:00'," + "update_at='2021-10-12 00:00:00'" + "WHERE id = "
+					+ product.getId();
+		}
 
 		int edit = _jdbcTemplate.update(sql.toString());
 

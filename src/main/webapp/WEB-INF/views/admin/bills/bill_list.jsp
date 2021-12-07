@@ -85,8 +85,6 @@
 																	<th>${ item.address }</th>
 																	<th><fmt:formatNumber type="number"
 																			groupingUsed="true" value="${ item.total }" /> vnđ</th>
-																	<%-- <th>${ item.status }</th> --%>
-
 																	<th><a
 																		href="<c:url value="/ApprovedCart/${item.id}/${ item.email }"/>"
 																		class="btn btn-mini btn-primary" type="button"> <i

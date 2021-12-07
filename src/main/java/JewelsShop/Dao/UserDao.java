@@ -34,17 +34,24 @@ public class UserDao extends BaseDao {
 	public User GetUserByAccount(User user) {
 		String sql = "SELECT * FROM user WHERE email = '" + user.getEmail().toLowerCase() + "'";
 		List<User> result = _jdbcTemplate.query(sql, new MapperUser());
-		
+
 		if (result.isEmpty()) {
-	        return null;
-	    } else {
-	        return result.get(0);
-	    }
+			return null;
+		} else {
+			return result.get(0);
+		}
 	}
-	
-	public List<User> GetAllAccount(){
+
+	public List<User> GetAllAccount() {
 		String sql = "SELECT * FROM user";
 		List<User> result = _jdbcTemplate.query(sql, new MapperUser());
 		return result;
+	}
+
+	public int ChangeStatusUser(long id, int status) {
+		String sql = "UPDATE user SET active = " + status + " WHERE id = " + id;
+		int update = _jdbcTemplate.update(sql.toString());
+		
+		return update;
 	}
 }

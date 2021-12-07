@@ -158,33 +158,35 @@ public class ProductAdminController extends BaseController {
 		// Get the file name file.getOriginalFilename()
 		String uploadFileName = file.getOriginalFilename();
 		if ("".equals(uploadFileName)) {
-			mvShare.addObject("message", "Upload faile!");
-			return mvShare;
+			mvShare.addObject("message", "No file update!");
+			System.out.println("Image: " + product.getImage());
+		} else {
+			System.out.println("Upload file name: " + uploadFileName);
+			String path = request.getServletContext().getRealPath("/assets/user/images/product");
+			System.out.println("path: " + path);
+			File realPath = new File(path);
+			if (!realPath.exists()) {
+				realPath.mkdir();
+			}
+			System.out.println("Upload file storage address:" + realPath);
+			// File input stream
+			InputStream is = file.getInputStream();
+			// File output stream
+			OutputStream os = new FileOutputStream(new File(realPath, uploadFileName));
+			// IO operation
+			int len = 0;
+			byte[] buffer = new byte[1024];
+			while ((len = is.read(buffer)) != -1) {
+				os.write(buffer, 0, len);
+				os.flush();
+			}
+			os.close();
+			is.close();
+			mvShare.addObject("image", "/assets/user/images/product/" + file.getOriginalFilename());
+			//////////////////
+
+			product.setImage(file.getOriginalFilename());
 		}
-		System.out.println("Upload file name: " + uploadFileName);
-		String path = request.getServletContext().getRealPath("/assets/user/images/product");
-		System.out.println("path: " + path);
-		File realPath = new File(path);
-		if (!realPath.exists()) {
-			realPath.mkdir();
-		}
-		System.out.println("Upload file storage address:" + realPath);
-		// File input stream
-		InputStream is = file.getInputStream();
-		// File output stream
-		OutputStream os = new FileOutputStream(new File(realPath, uploadFileName));
-		// IO operation
-		int len = 0;
-		byte[] buffer = new byte[1024];
-		while ((len = is.read(buffer)) != -1) {
-			os.write(buffer, 0, len);
-			os.flush();
-		}
-		os.close();
-		is.close();
-		mvShare.addObject("image", "/assets/user/images/product/" + file.getOriginalFilename());
-		//////////////////
-		product.setImage(file.getOriginalFilename());
 
 		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		Date date = new Date();
@@ -213,7 +215,7 @@ public class ProductAdminController extends BaseController {
 
 	@RequestMapping(value = { "quan-tri/xoa-san-pham/{id}" })
 	public ModelAndView DeleteProduct(@PathVariable long id) {
-		
+
 		int i = productService.DeleteProduct(id);
 
 		if (i > 0) {

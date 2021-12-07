@@ -99,6 +99,7 @@ public class CartController extends BaseController {
 	public String CheckOutBill(HttpServletRequest request, HttpSession session, @ModelAttribute("bill") Bill bill) {
 		bill.setQuanty(Integer.parseInt(session.getAttribute("TotalQuantyCart").toString()));
 		bill.setTotal(Double.parseDouble(session.getAttribute("TotalPriceCart").toString()));
+		bill.setStatus("Chờ xác nhận.");
 		if (billService.AddBill(bill) > 0) {
 			HashMap<Long, CartDto> carts = (HashMap<Long, CartDto>) session.getAttribute("Cart");
 			billService.AddBillDetail(carts);
