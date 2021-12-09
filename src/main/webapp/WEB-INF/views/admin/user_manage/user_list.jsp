@@ -7,8 +7,6 @@
 <title>Danh sách người dùng</title>
 </head>
 <body>
-	<h1>${ countBills.size() }</h1>
-	<h1>${ mess }</h1>
 	<div class="inner-block">
 		<div class="inbox">
 
